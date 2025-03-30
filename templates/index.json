@@ -49,82 +49,62 @@
         "background_gradient": ""
       }
     },
-    "image-link-blocks": {
-      "type": "image-link-blocks",
+    "logo_list_JD7ERm": {
+      "type": "logo-list",
       "blocks": {
-        "1664424046b00c932c-1": {
-          "type": "item",
+        "logo_7RVXYy": {
+          "type": "logo",
           "settings": {
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "logo": "shopify://shop_images/88-880577_logo-journal-des-femmes.png",
+            "logo_width": 300,
+            "link": ""
           }
         },
-        "1664424046b00c932c-2": {
-          "type": "item",
+        "logo_HMyiiB": {
+          "type": "logo",
           "settings": {
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
+            "logo_width": 300,
+            "link": ""
           }
         },
-        "1664424046b00c932c-3": {
-          "type": "item",
+        "logo_bRC3mW": {
+          "type": "logo",
           "settings": {
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "logo": "shopify://shop_images/Femme-actuelle-logo-1-1200x480.png",
+            "logo_width": 300,
+            "link": ""
           }
         },
-        "e4a0ef18-1856-4ddd-83d8-871a60d7acac": {
-          "type": "item",
+        "logo_DDzf7F": {
+          "type": "logo",
           "settings": {
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "logo": "shopify://shop_images/1200px-VOGUE_revista_-_logo.png",
+            "logo_width": 300,
+            "link": ""
           }
         }
       },
       "block_order": [
-        "1664424046b00c932c-1",
-        "1664424046b00c932c-2",
-        "1664424046b00c932c-3",
-        "e4a0ef18-1856-4ddd-83d8-871a60d7acac"
-      ],
-      "custom_css": [
-        "/* Centrer le titre \"VU SUR\" */.vu-sur-title {text-align: center; font-weight: bold; margin-bottom: 20px;}",
-        "/* Conteneur des logos */.vu-sur-container {display: flex; justify-content: center; align-items: center; gap: 20px; /* espace entre les cases */ flex-wrap: wrap;}",
-        "/* Chaque case */.vu-sur-item {width: 120px; height: 120px; /* réduire la hauteur */ display: flex; justify-content: center; align-items: center; background-color: #ccc; /* ou transparent si tu as une image */ border-radius: 8px;}"
+        "logo_7RVXYy",
+        "logo_HMyiiB",
+        "logo_bRC3mW",
+        "logo_DDzf7F"
       ],
       "settings": {
-        "full_width": false,
-        "block_size": "medium",
-        "subheading": "",
+        "full_width": true,
+        "stack_mobile": true,
         "title": "",
         "content": "<p>VU SUR</p>",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
+        "text_alignment": "center",
+        "items_per_row": 4,
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
-        "heading_gradient": ""
+        "heading_gradient": "",
+        "logo_item_background": "#ffffff",
+        "logo_item_border": ""
       }
     },
     "scrolling-text": {
@@ -849,7 +829,7 @@
   },
   "order": [
     "slideshow",
-    "image-link-blocks",
+    "logo_list_JD7ERm",
     "scrolling-text",
     "collection-list",
     "featured-collection",
