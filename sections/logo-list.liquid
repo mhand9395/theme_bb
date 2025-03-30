@@ -9,14 +9,14 @@
       --logo-list-items-border: {{ section.settings.logo_item_border.rgb }} / {{ section.settings.logo_item_border.alpha }};
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 300px) {
       #shopify-section-{{ section.id }} {
         --logo-list-grid: auto-flow 1fr / repeat(var(--logo-list-items-per-row), minmax(0, var(--logo-list-item-max-size)));
         --logo-list-items-per-row: {{ 3 | at_most : section.blocks.size }};
       }
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 600px) {
       #shopify-section-{{ section.id }} {
         --logo-list-items-per-row: {{ 4 | at_most: section.settings.items_per_row | at_most: section.blocks.size }};
       }
