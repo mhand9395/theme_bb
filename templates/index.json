@@ -25,9 +25,9 @@
             "button_text": "Acheter Maintenant",
             "button_link": "",
             "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
+            "button_background": "#9cd1c2",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#9cd1c2",
             "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
@@ -45,25 +45,13 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#f7f3eb",
+        "background": "#ffffff",
         "background_gradient": ""
       }
     },
     "image-link-blocks": {
       "type": "image-link-blocks",
       "blocks": {
-        "1664424046b00c932c-0": {
-          "type": "item",
-          "settings": {
-            "stretch_image": true,
-            "link_text": "",
-            "link_url": "",
-            "background": "",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
         "1664424046b00c932c-1": {
           "type": "item",
           "settings": {
@@ -114,18 +102,22 @@
         }
       },
       "block_order": [
-        "1664424046b00c932c-0",
         "1664424046b00c932c-1",
         "1664424046b00c932c-2",
         "1664424046b00c932c-3",
         "e4a0ef18-1856-4ddd-83d8-871a60d7acac"
+      ],
+      "custom_css": [
+        "/* Centrer le titre \"VU SUR\" */.vu-sur-title {text-align: center; font-weight: bold; margin-bottom: 20px;}",
+        "/* Conteneur des logos */.vu-sur-container {display: flex; justify-content: center; align-items: center; gap: 20px; /* espace entre les cases */ flex-wrap: wrap;}",
+        "/* Chaque case */.vu-sur-item {width: 120px; height: 120px; /* réduire la hauteur */ display: flex; justify-content: center; align-items: center; background-color: #ccc; /* ou transparent si tu as une image */ border-radius: 8px;}"
       ],
       "settings": {
         "full_width": false,
         "block_size": "medium",
         "subheading": "",
         "title": "",
-        "content": "",
+        "content": "<p>VU SUR</p>",
         "link_url": "",
         "link_text": "",
         "background": "",
