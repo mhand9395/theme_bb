@@ -19,9 +19,9 @@
             "content_max_width": 580,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "Résultats visibles en quelques semaines. 10 minutes par jour suffisent depuis chez vous.",
+            "subheading": "✯ ✯ ✯ ✯ ✯ Noté 4,7/5 par plus de 40'000 clientes satisfaites.",
             "title": "Dites adieu à la cellulite. Bonjour la peau lisse et ferme.",
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "button_text": "Acheter Maintenant",
             "button_link": "",
             "text_color": "#ffffff",
@@ -242,7 +242,7 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#F2F2F2",
+        "background": "#f2f2f2",
         "background_gradient": ""
       }
     }
