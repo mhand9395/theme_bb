@@ -2,6 +2,20 @@
   {%- render 'section-spacing-collapsing' -%}
 
   <style>
+
+    /* Réduction des espaces verticaux dans la section */
+  #shopify-section-{{ section.id }} .section-stack {
+    row-gap: 5rem !important;
+  }
+
+  #shopify-section-{{ section.id }} .prose h2,
+  #shopify-section-{{ section.id }} .prose p {
+    margin-bottom: 0.5rem !important;
+  }
+
+  #shopify-section-{{ section.id }} .logo-list {
+    margin-top: 0.5rem !important;
+  }
     #shopify-section-{{ section.id }} {
       --logo-list-item-max-size: 280px;
       --logo-list-grid: {% if section.settings.stack_mobile %}auto-flow 1fr / repeat(var(--logo-list-items-per-row), minmax(0, var(--logo-list-item-max-size))){% else %}1fr / auto-flow 52vw{% endif %};
