@@ -268,15 +268,51 @@
         "text_color": ""
       }
     },
+    "impact_text_hLgDEe": {
+      "type": "impact-text",
+      "blocks": {
+        "item_7pjwCP": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "subheading": "Des résultats concrets",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "item_7pjwCP"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "none",
+        "impact_text_size_ratio": 0.5,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "heading_text_color": "",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
     "media_grid_KyEJme": {
       "type": "media-grid",
       "blocks": {
         "video_pLbBDW": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/c853aebedf764d1e8b88e70849196bd4.HD-1080p-7.2Mbps-34252459.mp4",
             "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "show_video_controls": false,
-            "title": "Promote your products",
+            "title": "",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -297,9 +333,10 @@
         "video_zjjaWt": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/6f48ed7250f246629dcd9efa7cd940df.HD-1080p-7.2Mbps-34195011.mp4",
             "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "show_video_controls": false,
-            "title": "Promote your products",
+            "title": "",
             "heading_tag": "h4",
             "link_url": "",
             "link_text": "",
@@ -424,6 +461,7 @@
     "logo_list_JD7ERm",
     "featured_product_DwGGPf",
     "multi_column_Q9ppR6",
+    "impact_text_hLgDEe",
     "media_grid_KyEJme",
     "slideshow_K3rYUB"
   ]
