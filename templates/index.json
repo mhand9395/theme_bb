@@ -207,26 +207,65 @@
         "input_text_color": ""
       }
     },
-    "before_after_image_63YKXb": {
-      "type": "before-after-image",
+    "multi_column_Q9ppR6": {
+      "type": "multi-column",
+      "blocks": {
+        "item_e3NkjE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/15_3000x3000_1de341ae-903f-408e-b289-ae0cd4fdaa5d.jpg",
+            "column_size": "3",
+            "title": "Sophie L. Cliente vérifiée ✓ ★★★★★",
+            "heading_tag": "h6",
+            "content": "<p>Après une semaine d’utilisation, j’ai remarqué que ma peau sur les cuisses était beaucoup plus lisse. Le grain de peau s’est vraiment amélioré, et visuellement, la cellulite est moins marquée. Ceraslim, c’est devenu mon petit secret fermeté !</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_FRpHGe": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/151558561_116113980447818_5556840704983632618_n_dc86d77b-5092-4e62-b94a-d21cddb42f0b.jpg",
+            "column_size": "3",
+            "title": "Camille R. Cliente vérifiée ✓ ★★★★★",
+            "heading_tag": "h6",
+            "content": "<p>J’étais sceptique, mais franchement, ça fonctionne. Depuis que je masse mes hanches et mes fesses avec Ceraslim, ma peau est plus ferme et les capitons sont nettement atténués. Ça booste vraiment la confiance en soi !</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_CxymHY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/9_1024x1024_e2310c64-e726-454b-b527-a528aa5c1c80.jpg",
+            "column_size": "3",
+            "title": "Julie M. Cliente vérifiée ✓ ★★★★★",
+            "heading_tag": "h6",
+            "content": "<p>Ceraslim a clairement fait une différence. Ma cellulite était bien installée, et pourtant, au bout de quelques jours, j’ai vu ma peau se lisser. Et le massage est hyper agréable, c’est devenu un vrai moment détente.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_e3NkjE",
+        "item_FRpHGe",
+        "item_CxymHY"
+      ],
       "settings": {
         "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
         "subheading": "",
-        "title": "Before/after",
-        "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
-        "expand_image": false,
-        "text_position": "start",
-        "before_after_text_position": "top",
-        "before_text": "Before",
-        "after_text": "After",
-        "drag_initial_position": 50,
-        "background": "",
+        "title": "",
+        "content": "<p>Elles en parlent le mieux</p>",
+        "background": "#ffffff",
         "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
+        "text_color": ""
       }
     },
     "slideshow_K3rYUB": {
@@ -273,7 +312,7 @@
     "slideshow",
     "logo_list_JD7ERm",
     "featured_product_DwGGPf",
-    "before_after_image_63YKXb",
+    "multi_column_Q9ppR6",
     "slideshow_K3rYUB"
   ]
 }
