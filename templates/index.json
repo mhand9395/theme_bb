@@ -207,6 +207,78 @@
         "input_text_color": ""
       }
     },
+    "impact_text_hLgDEe": {
+      "type": "impact-text",
+      "blocks": {
+        "item_7pjwCP": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "subheading": "Des résultats concrets",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "item_7pjwCP"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "none",
+        "impact_text_size_ratio": 0.5,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "heading_text_color": "",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "media_grid_HmPt4K": {
+      "type": "media-grid",
+      "blocks": {
+        "image_zq4CAH": {
+          "type": "image",
+          "settings": {
+            "title": "Promote your products",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_zq4CAH"
+      ],
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
     "multi_column_Q9ppR6": {
       "type": "multi-column",
       "blocks": {
@@ -268,181 +340,8 @@
         "text_color": ""
       }
     },
-    "impact_text_hLgDEe": {
-      "type": "impact-text",
-      "blocks": {
-        "item_7pjwCP": {
-          "type": "item",
-          "settings": {
-            "title": "",
-            "subheading": "Des résultats concrets",
-            "content": "",
-            "button_text": "",
-            "button_url": "",
-            "animate_impact_text": false,
-            "animate_impact_text_duration": 2
-          }
-        }
-      },
-      "block_order": [
-        "item_7pjwCP"
-      ],
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "text_alignment": "center",
-        "impact_text_style": "fill",
-        "text_divider": "none",
-        "impact_text_size_ratio": 0.5,
-        "background": "#ffffff",
-        "background_gradient": "",
-        "heading_text_color": "",
-        "heading_gradient": "",
-        "text_color": "",
-        "button_background": "",
-        "button_text_color": ""
-      }
-    },
-    "media_grid_KyEJme": {
-      "type": "media-grid",
-      "blocks": {
-        "video_pLbBDW": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/c853aebedf764d1e8b88e70849196bd4.HD-1080p-7.2Mbps-34252459.mp4",
-            "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "show_video_controls": false,
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center-start text-start",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "video_zjjaWt": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/6f48ed7250f246629dcd9efa7cd940df.HD-1080p-7.2Mbps-34195011.mp4",
-            "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "show_video_controls": false,
-            "title": "",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "video_g37pkj": {
-          "type": "video",
-          "settings": {
-            "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "show_video_controls": false,
-            "title": "Promote your products",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "video_NmcHpH": {
-          "type": "video",
-          "settings": {
-            "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "show_video_controls": false,
-            "title": "Promote your products",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 1,
-            "desktop_row_span": 2,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "#000000",
-            "background_gradient": "",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "video_pLbBDW",
-        "video_zjjaWt",
-        "video_g37pkj",
-        "video_NmcHpH"
-      ],
-      "settings": {
-        "full_width": true,
-        "reduce_width": false,
-        "desktop_row_height": 290,
-        "mobile_row_height": 150,
-        "background": "#ffffff",
-        "background_gradient": ""
-      }
-    },
     "slideshow_K3rYUB": {
       "type": "slideshow",
-      "blocks": {
-        "image_WqaxCW": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide 1",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_WqaxCW"
-      ],
       "settings": {
         "full_width": true,
         "allow_transparent_header": true,
@@ -460,9 +359,9 @@
     "slideshow",
     "logo_list_JD7ERm",
     "featured_product_DwGGPf",
-    "multi_column_Q9ppR6",
     "impact_text_hLgDEe",
-    "media_grid_KyEJme",
+    "media_grid_HmPt4K",
+    "multi_column_Q9ppR6",
     "slideshow_K3rYUB"
   ]
 }
