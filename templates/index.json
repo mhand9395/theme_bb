@@ -262,7 +262,7 @@
         "text_alignment": "start",
         "subheading": "",
         "title": "",
-        "content": "<p>Elles en parlent le mieux</p>",
+        "content": "<h4>Elles en parlent le mieux</h4>",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
