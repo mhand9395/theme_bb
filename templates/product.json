@@ -22,10 +22,10 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "price": {
-          "type": "price",
+        "liquid_P3CzNU": {
+          "type": "liquid",
           "settings": {
-            "show_taxes_notice": false
+            "liquid": "<style>\n  .prix-produit-wrap {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    margin: 20px 0;\n    flex-wrap: wrap;\n  }\n\n  .prix-actuel {\n    font-size: 26px;\n    font-weight: bold;\n    color: #22c55e;\n  }\n\n  .prix-compare {\n    font-size: 16px;\n    text-decoration: line-through;\n    color: #888;\n  }\n\n  .badge-urgence {\n    background-color: #fef3c7;\n    color: #b45309;\n    font-size: 12px;\n    font-weight: 600;\n    padding: 5px 10px;\n    border-radius: 999px;\n    text-transform: uppercase;\n  }\n\n  @media screen and (max-width: 500px) {\n    .prix-produit-wrap {\n      flex-direction: column;\n      align-items: flex-start;\n      gap: 6px;\n    }\n  }\n</style>\n\n<div class=\"prix-produit-wrap\">\n  <div>\n    <span class=\"prix-actuel\">\n      {{ product.price | money }}\n    </span>\n    {% if product.compare_at_price > product.price %}\n      <span class=\"prix-compare\">\n        {{ product.compare_at_price | money }}\n      </span>\n    {% endif %}\n  </div>\n  <div class=\"badge-urgence\">🎯 Ça part vite !</div>\n</div>"
           }
         },
         "liquid_6YgkMr": {
@@ -85,7 +85,7 @@
       "block_order": [
         "title",
         "judge_me_reviews_preview_badge_YPcqLy",
-        "price",
+        "liquid_P3CzNU",
         "liquid_6YgkMr",
         "liquid_EDehBT",
         "liquid_PUYzTW",
