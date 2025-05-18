@@ -100,6 +100,19 @@
         "text_color": ""
       }
     },
+    "custom_liquid_PPzFRE": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .newsletter-section {\n    padding: 50px 20px;\n    text-align: center;\n    background-color: #ffffff;\n  }\n\n  .newsletter-section h2 {\n    font-size: 32px;\n    font-weight: 700;\n    margin-bottom: 10px;\n  }\n\n  .newsletter-section p {\n    font-size: 16px;\n    color: #555;\n    margin-bottom: 30px;\n  }\n\n  .newsletter-form {\n    max-width: 400px;\n    margin: 0 auto;\n    display: flex;\n    border: 1px solid #ccc;\n    border-radius: 8px;\n    overflow: hidden;\n  }\n\n  .newsletter-form input[type=\"email\"] {\n    flex: 1;\n    padding: 12px 16px;\n    font-size: 14px;\n    border: none;\n    outline: none;\n  }\n\n  .newsletter-form button {\n    background-color: #1e73be;\n    color: white;\n    border: none;\n    padding: 0 20px;\n    font-size: 18px;\n    cursor: pointer;\n    transition: background-color 0.3s ease;\n  }\n\n  .newsletter-form button:hover {\n    background-color: #155fa0;\n  }\n\n  .newsletter-success {\n    color: #22c55e;\n    font-size: 16px;\n    font-weight: 500;\n    margin-top: 20px;\n    animation: fadeIn 0.5s ease-in-out;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; transform: translateY(5px); }\n    to { opacity: 1; transform: translateY(0); }\n  }\n\n  @media screen and (max-width: 500px) {\n    .newsletter-section h2 {\n      font-size: 26px;\n    }\n\n    .newsletter-form {\n      flex-direction: column;\n    }\n\n    .newsletter-form input,\n    .newsletter-form button {\n      width: 100%;\n      box-sizing: border-box;\n    }\n\n    .newsletter-form button {\n      padding: 12px;\n    }\n  }\n</style>\n\n<div class=\"newsletter-section\">\n  {% if form.posted_successfully? %}\n    <h2>Merci pour votre inscription 💌</h2>\n    <p class=\"newsletter-success\">Vous êtes bien inscrit à notre newsletter.</p>\n  {% else %}\n    <h2>Inscrivez-vous à notre newsletter</h2>\n    <p>Recevez des offres exclusives et les dernières nouveautés directement dans votre boîte mail.</p>\n    <form method=\"post\" action=\"{{ routes.newsletter_subscribe_url }}\" accept-charset=\"UTF-8\" class=\"newsletter-form\">\n      <input type=\"hidden\" name=\"form_type\" value=\"customer\" />\n      <input type=\"hidden\" name=\"utf8\" value=\"✓\" />\n      <input type=\"email\" name=\"contact[email]\" placeholder=\"Votre email\" required>\n      <button type=\"submit\">→</button>\n    </form>\n  {% endif %}\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_hEfdHW": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -122,6 +135,7 @@
     "custom_liquid_BijxMi",
     "custom_liquid_xzxYfi",
     "custom_liquid_c8d9wy",
+    "custom_liquid_PPzFRE",
     "custom_liquid_hEfdHW"
   ]
 }
