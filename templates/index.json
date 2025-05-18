@@ -29,7 +29,7 @@
         "full_width": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false,
-        "liquid": "<style>\n  .featured-in {\n    background-color: #ffffff;\n    color: #000000;\n    padding: 20px;\n    border-radius: 20px;\n    text-align: center;\n  }\n\n  .featured-in h2 {\n    font-size: 14px;\n    letter-spacing: 2px;\n    font-weight: bold;\n    text-transform: uppercase;\n    margin-bottom: 15px;\n  }\n\n  .featured-logos {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 30px;\n    flex-wrap: wrap;\n  }\n\n  .featured-logo {\n    max-height: 60px;\n    max-width: 130px;\n    object-fit: contain;\n    transition: transform 0.3s ease;\n  }\n\n  .featured-logo:hover {\n    transform: scale(1.1);\n  }\n\n  @media screen and (max-width: 768px) {\n    .featured-logo {\n      max-height: 45px;\n      max-width: 100px;\n    }\n  }\n</style>\n\n<div class=\"featured-in\">\n  <h2>VU DANS</h2>\n  <div class=\"featured-logos\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/madame.png?v=1747575515\" alt=\"Madame Figaro\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/grazia.png?v=1747575514\" alt=\"Grazia\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/vogue.png?v=1747575514\" alt=\"Vogue\" class=\"featured-logo\">\n  </div>\n</div>",
+        "liquid": "<style>\n  .featured-in {\n    background-color: #ffffff;\n    color: #000000;\n    padding: 10px 20px; /* marge haut + bas réduite */\n    border-radius: 20px;\n    text-align: center;\n  }\n\n  .featured-in h2 {\n    font-size: 14px;\n    letter-spacing: 2px;\n    font-weight: bold;\n    text-transform: uppercase;\n    margin: 0 0 10px 0; /* marge en bas du titre réduite */\n  }\n\n  .featured-logos {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 30px;\n    flex-wrap: wrap;\n  }\n\n  .featured-logo {\n    max-height: 60px;\n    max-width: 130px;\n    object-fit: contain;\n    transition: transform 0.3s ease;\n  }\n\n  .featured-logo:hover {\n    transform: scale(1.1);\n  }\n\n  @media screen and (max-width: 768px) {\n    .featured-logo {\n      max-height: 45px;\n      max-width: 100px;\n    }\n  }\n</style>\n\n<div class=\"featured-in\">\n  <h2>VU DANS</h2>\n  <div class=\"featured-logos\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/madame.png?v=1747575515\" alt=\"Madame Figaro\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/grazia.png?v=1747575514\" alt=\"Grazia\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/vogue.png?v=1747575514\" alt=\"Vogue\" class=\"featured-logo\">\n  </div>\n</div>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -47,11 +47,25 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "custom_liquid_dhMne8": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .testimonial-section {\n    padding: 40px 20px;\n    background-color: #ffffff;\n    text-align: center;\n  }\n\n  .testimonial-title {\n    font-size: 32px;\n    font-weight: 700;\n    margin-bottom: 40px;\n  }\n\n  .testimonial-grid {\n    display: flex;\n    justify-content: center;\n    gap: 30px;\n    flex-wrap: wrap;\n  }\n\n  .testimonial-card {\n    background-color: #f9f9f9;\n    padding: 25px;\n    border-radius: 16px;\n    max-width: 320px;\n    text-align: center;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.05);\n    transition: transform 0.3s ease;\n  }\n\n  .testimonial-card:hover {\n    transform: translateY(-5px);\n  }\n\n  .testimonial-image {\n    width: 90px;\n    height: 90px;\n    object-fit: cover;\n    border-radius: 50%;\n    margin-bottom: 15px;\n    border: 3px solid #36a2f7;\n  }\n\n  .testimonial-name {\n    font-weight: bold;\n    margin-top: 15px;\n    font-size: 14px;\n    color: #444;\n  }\n\n  .testimonial-subtitle {\n    font-size: 16px;\n    font-weight: 600;\n    margin-bottom: 10px;\n    color: #000;\n  }\n\n  .testimonial-text {\n    font-size: 14px;\n    color: #555;\n    line-height: 1.6;\n  }\n\n  @media screen and (max-width: 768px) {\n    .testimonial-card {\n      max-width: 90%;\n    }\n  }\n</style>\n\n<div class=\"testimonial-section\">\n  <h2 class=\"testimonial-title\">Ce qu'ils pensent de nous</h2>\n  <div class=\"testimonial-grid\">\n    <div class=\"testimonial-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/shane.png\" alt=\"Shane G.\" class=\"testimonial-image\">\n      <div class=\"testimonial-subtitle\">Confort incroyable</div>\n      <p class=\"testimonial-text\">“Incroyablement confortables. J’en ai mis dans toutes mes paires de chaussures. Je peux marcher ou travailler toute la journée sans aucune douleur.”</p>\n      <div class=\"testimonial-name\">Shane G.</div>\n    </div>\n    <div class=\"testimonial-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/maya.png\" alt=\"Maya L.\" class=\"testimonial-image\">\n      <div class=\"testimonial-subtitle\">Confort toute la journée</div>\n      <p class=\"testimonial-text\">“Produit incroyable ! Il a soulagé mes douleurs de pied chroniques. Dès que je les mets, la <strong>tension dans mes talons disparaît</strong>. J’en ai acheté 3 paires !”</p>\n      <div class=\"testimonial-name\">Maya L.</div>\n    </div>\n    <div class=\"testimonial-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/rayan.png\" alt=\"Rayan K.\" class=\"testimonial-image\">\n      <div class=\"testimonial-subtitle\">À essayer absolument</div>\n      <p class=\"testimonial-text\">“Argent bien investi ! Aussi efficaces que les semelles orthopédiques, mais bien plus abordables — et franchement, encore plus confortables.”</p>\n      <div class=\"testimonial-name\">Rayan K.</div>\n    </div>\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "custom_liquid_f6gWnr",
     "custom_liquid_V4GdYT",
-    "custom_liquid_HRDeT4"
+    "custom_liquid_HRDeT4",
+    "custom_liquid_dhMne8"
   ]
 }
