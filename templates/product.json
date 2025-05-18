@@ -18,15 +18,15 @@
             "heading_tag": "h2"
           }
         },
+        "judge_me_reviews_preview_badge_YPcqLy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {
             "show_taxes_notice": false
           }
-        },
-        "judge_me_reviews_preview_badge_YPcqLy": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         },
         "liquid_6YgkMr": {
           "type": "liquid",
@@ -82,8 +82,8 @@
       },
       "block_order": [
         "title",
-        "price",
         "judge_me_reviews_preview_badge_YPcqLy",
+        "price",
         "liquid_6YgkMr",
         "liquid_EDehBT",
         "payment_terms",
@@ -97,7 +97,7 @@
         "full_width": true,
         "show_fixed_add_to_cart": true,
         "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
+        "desktop_media_layout": "grid_highlight",
         "mobile_media_size": "contained",
         "mobile_carousel_control": "thumbnails",
         "enable_video_autoplay": false,
