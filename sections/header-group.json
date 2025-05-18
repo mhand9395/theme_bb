@@ -14,23 +14,23 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message_jt67Qj": {
+        "message_FGPbii": {
           "type": "message",
           "settings": {
-            "text": "",
+            "text": "GARANTIE SATISFAIT OU REMBOURSÉ 30 JOURS + LIVRAISON GRATUITE",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message_jt67Qj"
+        "message_FGPbii"
       ],
       "settings": {
         "enable_sticky": false,
         "text_size": "text-xs",
         "navigation_mode": "arrows",
         "scrolling_speed": 10,
-        "background": "#000000",
+        "background": "#2e2a39",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
