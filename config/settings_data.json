@@ -45,11 +45,6 @@
     "checkout_button_color": "#1a1a1a",
     "content_for_index": [],
     "blocks": {
-      "14767517777667443712": {
-        "type": "shopify://apps/sm-estimated-delivery-date-edd/blocks/sales-boost-script/58a85b5f-3425-4d90-865c-ff4d56cf0314",
-        "disabled": false,
-        "settings": {}
-      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
