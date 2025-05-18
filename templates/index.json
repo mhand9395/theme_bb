@@ -9,44 +9,17 @@
  */
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/accueil_1.jpg",
-            "content_max_width": 580,
-            "mobile_text_position": "place-self-start text-start",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "PLUS DE 500,000+ CLIENTS SATISFAITS",
-            "title": "RÉVOLUTIONNEZ VOTRE CONFORT",
-            "heading_tag": "h3",
-            "button_text": "Acheter Maintenant",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#9cd1c2",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#9cd1c2",
-            "overlay_opacity": 0,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide-1"
-      ],
+    "custom_liquid_f6gWnr": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
       "settings": {
-        "full_width": false,
-        "allow_transparent_header": true,
-        "image_size": "md",
-        "controls_type": "numbers",
-        "transition_type": "fade_with_text",
-        "autoplay": false,
-        "cycle_speed": 6,
-        "background": "#ffffff",
-        "background_gradient": ""
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<section style=\"display: flex; flex-wrap: wrap; background-color: #f4f7fa; border-radius: 12px; overflow: hidden;\">\n  <div style=\"flex: 1; min-width: 300px; background-color: #2f4a66; padding: 40px; color: white; display: flex; flex-direction: column; justify-content: center;\">\n    <h2 style=\"font-size: 28px; font-weight: bold; margin-bottom: 20px;\">REVOLUTIONIZE YOUR COMFORT</h2>\n    <p style=\"font-size: 16px; line-height: 1.6; margin-bottom: 30px;\">\n      Through balanced & cushioned support, our <strong>CloudSoles</strong> provide the gift of effortless comfort to nurture your feet's healthiest form.\n    </p>\n    <a href=\"{{ routes.cart_url | default: '#' }}\" style=\"background-color: #36a2f7; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; width: fit-content;\">SHOP NOW</a>\n    <p style=\"margin-top: 20px; font-size: 12px; letter-spacing: 1px; opacity: 0.7;\">OVER 500,000+ HAPPY CUSTOMER</p>\n  </div>\n  <div style=\"flex: 1; min-width: 300px; background-color: #36a2f7; display: flex; align-items: center; justify-content: center; padding: 40px;\">\n    <img src=\"{{ 'semelles.png' | asset_url }}\" alt=\"CloudSoles Insoles\" style=\"max-width: 100%; height: auto; object-fit: contain;\">\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "logo_list_JD7ERm": {
@@ -349,7 +322,7 @@
     }
   },
   "order": [
-    "slideshow",
+    "custom_liquid_f6gWnr",
     "logo_list_JD7ERm",
     "featured_product_DwGGPf",
     "impact_text_hLgDEe",
