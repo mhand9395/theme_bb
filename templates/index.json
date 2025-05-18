@@ -34,10 +34,24 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "custom_liquid_HRDeT4": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .benefits-section {\n    text-align: center;\n    padding: 0 20px 50px 20px; /* padding haut supprimé */\n    background-color: #ffffff;\n  }\n\n  .benefits-title {\n    font-size: 28px;\n    font-weight: 700;\n    margin: 0 0 40px 0;\n  }\n\n  .benefits-grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n    justify-content: center;\n  }\n\n  .benefit-card {\n    width: 200px;\n    border-radius: 16px;\n    overflow: hidden;\n    background-color: #f9f9f9;\n    box-shadow: 0 0 0 transparent;\n    transition: transform 0.3s ease;\n  }\n\n  .benefit-card:hover {\n    transform: translateY(-5px);\n  }\n\n  .benefit-image {\n    width: 100%;\n    height: 160px;\n    object-fit: cover;\n    background-color: #dff0ff;\n  }\n\n  .benefit-label {\n    font-weight: bold;\n    padding: 16px 10px;\n    font-size: 14px;\n    text-transform: uppercase;\n    color: #000000;\n  }\n\n  @media screen and (max-width: 768px) {\n    .benefit-card {\n      width: 45%;\n    }\n  }\n\n  @media screen and (max-width: 480px) {\n    .benefit-card {\n      width: 100%;\n    }\n  }\n</style>\n\n<div class=\"benefits-section\">\n  <h2 class=\"benefits-title\">Tout le confort, toute la douceur.</h2>\n  <div class=\"benefits-grid\">\n    <div class=\"benefit-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/1.png?v=1747576082\" alt=\"Ultra moelleux\" class=\"benefit-image\">\n      <div class=\"benefit-label\">ULTRA MOELLEUX</div>\n    </div>\n    <div class=\"benefit-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/2.png?v=1747576082\" alt=\"Technologie Cloud 4D\" class=\"benefit-image\">\n      <div class=\"benefit-label\">TECHNOLOGIE CLOUD 4D</div>\n    </div>\n    <div class=\"benefit-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/3.png?v=1747576083\" alt=\"Anti-transpiration et odeurs\" class=\"benefit-image\">\n      <div class=\"benefit-label\">ANTI-TRANSPIRATION & ODEUR</div>\n    </div>\n    <div class=\"benefit-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/4.png?v=1747576083\" alt=\"Stabilité maximale\" class=\"benefit-image\">\n      <div class=\"benefit-label\">STABILITÉ MAXIMALE</div>\n    </div>\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "custom_liquid_f6gWnr",
-    "custom_liquid_V4GdYT"
+    "custom_liquid_V4GdYT",
+    "custom_liquid_HRDeT4"
   ]
 }
