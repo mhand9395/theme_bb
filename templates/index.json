@@ -15,12 +15,12 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2-models-wearing-myoovi-kit_4-5.jpg",
+            "image": "shopify://shop_images/accueil_1.jpg",
             "content_max_width": 580,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "✯ ✯ ✯ ✯ ✯ Noté 4,7/5 par plus de 40'000 clientes satisfaites.",
-            "title": "Dites adieu à la cellulite. Bonjour la peau lisse et ferme.",
+            "subheading": "PLUS DE 500,000+ CLIENTS SATISFAITS",
+            "title": "RÉVOLUTIONNEZ VOTRE CONFORT",
             "heading_tag": "h3",
             "button_text": "Acheter Maintenant",
             "button_link": "",
@@ -55,7 +55,6 @@
         "logo_7RVXYy": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/88-880577_logo-journal-des-femmes.png",
             "logo_width": 300,
             "link": ""
           }
@@ -63,7 +62,6 @@
         "logo_HMyiiB": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Cosmopolitan-Logo.png",
             "logo_width": 300,
             "link": ""
           }
@@ -71,7 +69,6 @@
         "logo_bRC3mW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Femme-actuelle-logo-1-1200x480.png",
             "logo_width": 300,
             "link": ""
           }
@@ -79,7 +76,6 @@
         "logo_DDzf7F": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/1200px-VOGUE_revista_-_logo.png",
             "logo_width": 300,
             "link": ""
           }
@@ -285,7 +281,6 @@
         "item_e3NkjE": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/15_3000x3000_1de341ae-903f-408e-b289-ae0cd4fdaa5d.jpg",
             "column_size": "3",
             "title": "Sophie L. Cliente vérifiée ✓ ★★★★★",
             "heading_tag": "h6",
@@ -298,7 +293,6 @@
         "item_FRpHGe": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/151558561_116113980447818_5556840704983632618_n_dc86d77b-5092-4e62-b94a-d21cddb42f0b.jpg",
             "column_size": "3",
             "title": "Camille R. Cliente vérifiée ✓ ★★★★★",
             "heading_tag": "h6",
@@ -311,7 +305,6 @@
         "item_CxymHY": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/9_1024x1024_e2310c64-e726-454b-b527-a528aa5c1c80.jpg",
             "column_size": "3",
             "title": "Julie M. Cliente vérifiée ✓ ★★★★★",
             "heading_tag": "h6",
