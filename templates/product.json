@@ -12,19 +12,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {
             "heading_tag": "h2"
           }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -32,10 +24,14 @@
             "show_taxes_notice": false
           }
         },
-        "rating": {
-          "type": "rating",
+        "judge_me_reviews_preview_badge_YPcqLy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "liquid_EDehBT": {
+          "type": "liquid",
           "settings": {
-            "show_empty": false
+            "liquid": "<style>\n  .trust-bar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px 24px;\n    border: 2px solid #e5e7eb;\n    border-radius: 12px;\n    max-width: 100%;\n    margin-top: 20px;\n    gap: 30px;\n    flex-wrap: nowrap;\n    overflow-x: auto;\n    background-color: #ffffff;\n  }\n\n  .trust-item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    flex: 1;\n    min-width: 100px;\n    white-space: nowrap;\n  }\n\n  .trust-icon {\n    font-size: 28px;\n    margin-bottom: 6px;\n  }\n\n  .trust-label {\n    font-size: 13px;\n    font-weight: 600;\n    text-transform: uppercase;\n    color: #111827;\n    text-align: center;\n  }\n\n  @media screen and (max-width: 768px) {\n    .trust-bar {\n      justify-content: space-evenly;\n      gap: 16px;\n    }\n\n    .trust-label {\n      font-size: 12px;\n    }\n\n    .trust-icon {\n      font-size: 24px;\n    }\n  }\n</style>\n\n<div class=\"trust-bar\">\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">🚚</div>\n    <div class=\"trust-label\">LIVRAISON OFFERTE</div>\n  </div>\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">🔁</div>\n    <div class=\"trust-label\">GARANTIE 30 JOURS</div>\n  </div>\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">📦</div>\n    <div class=\"trust-label\">RETOURS SIMPLIFIÉS</div>\n  </div>\n</div>"
           }
         },
         "payment_terms": {
@@ -79,11 +75,10 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "badges",
         "price",
-        "rating",
+        "judge_me_reviews_preview_badge_YPcqLy",
+        "liquid_EDehBT",
         "payment_terms",
         "separator",
         "description",
