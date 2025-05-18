@@ -40,6 +40,12 @@
             "liquid": "<style>\n  .trust-bar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 24px;\n    padding: 16px 20px;\n    border: 1px solid #3b82f6;\n    border-radius: 12px;\n    background-color: #ffffff;\n    flex-wrap: nowrap;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    scrollbar-width: none; /* Firefox */\n  }\n\n  .trust-bar::-webkit-scrollbar {\n    display: none; /* Chrome, Safari */\n  }\n\n  .trust-item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    min-width: 100px;\n    flex: 1 1 0;\n    white-space: nowrap;\n  }\n\n  .trust-icon {\n    font-size: 26px;\n    margin-bottom: 6px;\n  }\n\n  .trust-label {\n    font-size: 13px;\n    font-weight: 600;\n    text-transform: uppercase;\n    color: #1f2937;\n    text-align: center;\n  }\n\n  @media screen and (max-width: 480px) {\n    .trust-icon {\n      font-size: 22px;\n    }\n\n    .trust-label {\n      font-size: 12px;\n    }\n  }\n</style>\n\n<div class=\"trust-bar\">\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">🚚</div>\n    <div class=\"trust-label\">Livraison offerte</div>\n  </div>\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">🔁</div>\n    <div class=\"trust-label\">Garantie 30 jours</div>\n  </div>\n  <div class=\"trust-item\">\n    <div class=\"trust-icon\">📦</div>\n    <div class=\"trust-label\">Retours simplifiés</div>\n  </div>\n</div>"
           }
         },
+        "liquid_PUYzTW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n  .size-chart-link {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    font-size: 15px;\n    color: #1e3a59;\n    font-weight: 500;\n    text-decoration: underline;\n    cursor: pointer;\n    transition: color 0.3s ease;\n    margin: 12px 0;\n  }\n\n  .size-chart-link:hover {\n    color: #36a2f7;\n  }\n\n  .size-chart-link span {\n    font-size: 18px;\n  }\n</style>\n\n<a href=\"#popup-size-chart\" class=\"size-chart-link\">\n  <span>📏</span> Consultez notre guide des tailles\n</a>"
+          }
+        },
         "payment_terms": {
           "type": "payment_terms",
           "settings": {}
@@ -47,12 +53,6 @@
         "separator": {
           "type": "separator",
           "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false
-          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -86,9 +86,9 @@
         "price",
         "liquid_6YgkMr",
         "liquid_EDehBT",
+        "liquid_PUYzTW",
         "payment_terms",
         "separator",
-        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons"
