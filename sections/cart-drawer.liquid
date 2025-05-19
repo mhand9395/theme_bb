@@ -1,3 +1,19 @@
+{% for item in cart.items %}
+  <tr>
+    <td>
+      <strong>{{ item.product.title }}</strong><br>
+      Taille : {{ item.variant.title }}<br>
+      Quantité : {{ item.quantity }}<br>
+      Prix unitaire : {{ item.original_line_price | divided_by: item.quantity | money }}
+      {% if item.line_level_discount_allocations.size > 0 %}
+        <br>
+        Prix remisé : {{ item.final_line_price | divided_by: item.quantity | money }}
+      {% endif %}
+    </td>
+    <!-- ... autres colonnes comme image, bouton supprimer, etc. -->
+  </tr>
+{% endfor %}
+
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} class="cart-drawer drawer drawer--lg" id="cart-drawer">
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
