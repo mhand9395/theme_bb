@@ -105,9 +105,9 @@
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<style>\n.fullwidth-image-section {\n  width: 100%;\n  padding: 40px 20px;\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.fullwidth-image-section img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}\n</style>\n\n<div class=\"fullwidth-image-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/DES_SEMELLES_COMME_CELLES-CI.png?v=1747659590\" alt=\"Des semelles comme celles-ci\">\n</div>",
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n.slim-image-section {\n  width: 100%;\n  padding: 40px 0;\n  background-color: #ffffff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.slim-image-section img {\n  max-width: 100%;\n  height: auto;\n  max-height: 650px;\n  object-fit: contain;\n  display: block;\n}\n</style>\n\n<div class=\"slim-image-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/DES_SEMELLES_COMME_CELLES-CI.png?v=1747659590\" alt=\"Des semelles comme celles-ci\">\n</div>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
