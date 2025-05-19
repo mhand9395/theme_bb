@@ -11,7 +11,7 @@ Supported variables
 
 * line_item: the line item to render (required)
 * show_desktop_quantity: if set to true (for instance on cart drawer), the quantity is also shown on the line
-{%- endcomment -%}
+
 
 {%- if line_item.variant.inventory_management != blank and line_item.variant.inventory_policy == 'deny' -%}
   {%- assign line_max_quantity = line_item.variant.inventory_quantity -%}
@@ -104,3 +104,56 @@ Supported variables
     </div>
   {%- endif -%}
 </line-item>
+
+{%- endcomment -%}
+
+<div class="line-item grid grid-cols-[auto_1fr] gap-4 sm:gap-6 items-start">
+  <div class="line-item__media w-20 h-20">
+    {% if line_item.image %}
+      <img src="{{ line_item.image | image_url: width: 160 }}" 
+           alt="{{ line_item.image.alt | escape }}" 
+           class="object-cover rounded" loading="lazy" width="80" height="80">
+    {% endif %}
+  </div>
+
+  <div class="line-item__details v-stack gap-1">
+    <div class="line-item__header">
+      <a href="{{ line_item.url }}" class="font-medium leading-snug hover:underline block">
+        {{ line_item.product.title }}
+      </a>
+
+      {% if line_item.variant.title != 'Default Title' %}
+        <div class="text-sm text-subdued">
+          Taille : {{ line_item.variant.title }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="text-sm text-subdued">
+      Quantité : {{ line_item.quantity }}<br>
+
+      Prix unitaire : {{ line_item.original_line_price | divided_by: line_item.quantity | money }}
+
+      {% if line_item.final_line_price != line_item.original_line_price %}
+        <br>Prix remisé : {{ line_item.final_line_price | divided_by: line_item.quantity | money }}
+      {% endif %}
+    </div>
+
+    {%- if line_item.line_level_discount_allocations.size > 0 -%}
+      <ul class="discounts text-sm text-green-700 mt-1">
+        {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+          <li>-{{ discount_allocation.amount | money }} ({{ discount_allocation.discount_application.title }})</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <form method="post" action="/cart/change" class="line-item__form mt-2">
+      <input type="hidden" name="id" value="{{ line_item.key }}">
+      <div class="flex items-center gap-2">
+        <input type="number" name="quantity" value="{{ line_item.quantity }}" min="0" class="input w-16 text-center">
+        <button type="submit" class="text-sm underline">Mettre à jour</button>
+      </div>
+    </form>
+  </div>
+</div>
+
