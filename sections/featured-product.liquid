@@ -15,21 +15,21 @@
 
   @media screen and (min-width: 1000px) {
     #shopify-section-{{ section.id }} {
-      {%- assign media_ratio = section.settings.desktop_media_width | divided_by: 50.0 -%}
+    {%- assign media_ratio = section.settings.desktop_media_width | divided_by: 50.0 -%}
       --product-grid: auto / minmax(0, {{ media_ratio }}fr) minmax(0, {{ 2.0 | minus: media_ratio }}fr);
       --product-gallery-media-list-grid: {% if section.settings.desktop_media_layout contains 'grid' %}auto-flow dense / repeat(2, minmax(0, 1fr)){% else %}auto / auto-flow 100%{% endif %};
       --product-gallery-media-list-gap: calc(var(--grid-gutter) / 2);
     }
 
-    {%- if section.settings.desktop_media_layout == 'grid_highlight' -%}
-      #shopify-section-{{ section.id }} .product-gallery__media-list > :not([hidden]) {
-        grid-column: span 2;
-      }
+  {%- if section.settings.desktop_media_layout == 'grid_highlight' -%}
+    #shopify-section-{{ section.id }} .product-gallery__media-list > :not([hidden]) {
+      grid-column: span 2;
+    }
 
-      #shopify-section-{{ section.id }} .product-gallery__media-list > :not([hidden]) ~ *:not(.product-gallery__media--expand) {
-        grid-column: span 1;
-      }
-    {%- endif -%}
+    #shopify-section-{{ section.id }} .product-gallery__media-list > :not([hidden]) ~ *:not(.product-gallery__media--expand) {
+      grid-column: span 1;
+    }
+  {%- endif -%}
   }
 
   @media screen and (min-width: 1400px) {
@@ -41,100 +41,90 @@
 
 <div {% render 'section-properties', tight: true %}>
   <div class="product">
-    {%- if product.media.size > 0 -%}
-      {%- render 'product-gallery', product: product -%}
-    {%- endif -%}
+    {%- if section.settings.product != blank -%}
+      {%- if section.settings.product.media.size > 0 -%}
+        {%- render 'product-gallery', product: section.settings.product -%}
+      {%- endif -%}
 
-    {%- render 'product-info', product: product, update_url: true -%}
+      {%- render 'product-info', product: section.settings.product, update_url: false -%}
+    {%- else -%}
+      <product-gallery form="placeholder-{{ section.id }}" class="product-gallery {% if section.settings.mobile_carousel_control contains 'dots' %}product-gallery--mobile-dots{% endif %} {% if section.settings.desktop_media_layout contains 'grid' %}product-gallery--desktop-grid{% else %}product-gallery--desktop-carousel{% endif %} {% if section.settings.desktop_media_layout == 'carousel_thumbnails_left' %}product-gallery--desktop-thumbnails-left{% endif %} {% if section.settings.mobile_media_size == 'expanded' %}product-gallery--mobile-expanded{% endif %}">
+        <div class="product-gallery__ar-wrapper">
+          <div class="product-gallery__media-list-wrapper">
+
+            <media-carousel desktop-mode="{{ section.settings.desktop_media_layout }}" adaptive-height class="product-gallery__media-list {% if section.settings.mobile_media_size == 'expanded' %}full-bleed{% else %}bleed{% endif %} scroll-area md:unbleed">
+              <div class="product-gallery__media {% if section.settings.mobile_carousel_control != 'free_scroll' %}snap-center{% endif %}">
+                {{- 'product-1' | placeholder_svg_tag: 'placeholder rounded' -}}
+              </div>
+            </media-carousel>
+          </div>
+        </div>
+      </product-gallery>
+
+      <safe-sticky class="product-info">
+        {%- capture product_form_id -%}featured-product-form-{{ section.id }}{%- endcapture -%}
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'vendor' -%}
+              <div class="product-info__vendor" {{ block.shopify_attributes }}>{{- 'general.on_boarding.product_vendor' | t -}}</div>
+
+            {%- when 'title' -%}
+              <h2 class="product-info__title {{ block.settings.heading_tag }}" {{ block.shopify_attributes }}>{{ 'general.on_boarding.product_title' | t }}</h2>
+
+            {%- when 'price' -%}
+              <div class="product-info__price">
+                <price-list class="price-list price-list--lg">
+                  <sale-price class="text-lg">{{ 4000 | money }}</sale-price>
+                </price-list>
+              </div>
+
+            {%- when 'separator' -%}
+              <hr class="product-info__separator" {{ block.shopify_attributes }}>
+
+            {%- when 'description' -%}
+              <div class="product-info__description" {{ block.shopify_attributes }}>
+                <div class="prose">
+                  {{- 'general.on_boarding.product_description' | t -}}
+                </div>
+              </div>
+
+            {%- when 'quantity_selector' -%}
+              <div class="product-info__quantity-selector {{ block.shopify_attributes }}">
+                <div class="form-control">
+                  <label for="{{ product_form_id }}-quantity" class="block-label text-subdued">{{- 'product.quantity.label' | t -}}:</label>
+
+                  <quantity-selector class="quantity-selector">
+                    <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.decrease_quantity' | t }}">{% render 'icon' with 'minus', width: 10, height: 2 %}</button>
+                    <input id="{{ product_form_id }}-quantity" type="text" is="quantity-input" inputmode="numeric" class="quantity-selector__input" name="quantity" form="{{ product_form_id }}" size="2" value="1" autocomplete="off">
+                    <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.increase_quantity' | t }}">{% render 'icon' with 'plus', width: 10, height: 10 %}</button>
+                  </quantity-selector>
+                </div>
+              </div>
+
+            {%- when 'buy_buttons' -%}
+              <div class="product-info__buy-buttons" {{ block.shopify_attributes }}>
+                <buy-buttons class="buy-buttons">
+                  {%- capture button_content -%}{{ 'product.general.add_to_cart_button' | t }}{%- endcapture -%}
+                  {%- render 'button', content: button_content, type: 'submit', size: 'xl', background: block.settings.atc_button_background, text_color: block.settings.atc_button_text_color -%}
+                </buy-buttons>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </safe-sticky>
+    {%- endif -%}
   </div>
 </div>
 
-{%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
-
-{%- if section.settings.show_fixed_add_to_cart and product.available and buy_buttons_block != blank -%}
-  {%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
-
-  <product-quick-add form="{{ product_form_id }}" class="product-quick-add">
-    {%- assign button_label = 'product.general.add_to_cart_button' | t -%}
-
-    <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
-      {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
-    </buy-buttons>
-
-    {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-
-    <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
-      {%- if image != blank -%}
-        <variant-media widths="80,160" form="{{ product_form_id }}">
-          {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
-        </variant-media>
-      {%- endif -%}
-
-      <div class="v-stack gap-0.5">
-        {%- assign vendor_block = section.blocks | where: 'type', 'vendor' -%}
-
-        {%- if vendor_block != blank -%}
-          {%- render 'vendor' with product.vendor, class: 'text-xs' -%}
-        {%- endif -%}
-
-        <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
-        {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
-      </div>
-
-      <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
-        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
-      </buy-buttons>
-    </div>
-  </product-quick-add>
-{%- endif -%}
-
-{%- comment -%}
-IMPLEMENTATION NOTE: Shopify does not currently allows to render a given section within the context of a given product. However,
-when rendering the quick buy popovers, we want to be able to re-use the merchant's choices (such as the selector type). This
-is however only possible by rendering the whole product page, and extracting the relevant part. Here, we therefore render the
-quick buy information in a template, that will be extracted in JS, but ensure it is not visible in the main product page
-{%- endcomment -%}
-<template id="quick-buy-content">
-  {%- capture product_form_id -%}quick-buy-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
-
-  <div class="quick-buy-drawer__variant text-start h-stack gap-6" slot="header">
-    {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-
-    {%- if image != blank -%}
-      <variant-media widths="80,160" form="{{ product_form_id }}">
-        {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'quick-buy-drawer__media rounded-xs' -}}
-      </variant-media>
-    {%- endif -%}
-
-    <div class="v-stack gap-0.5">
-      <a href="{{ product.url }}" class="bold justify-self-start">{{ product.title }}</a>
-      {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
-    </div>
-  </div>
-
-  <div class="quick-buy-drawer__info">
-    {%- comment -%}We only show a limited set of information in the quick buy{%- endcomment -%}
-
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when '@app' -%}
-          {%- render block -%}
-
-        {%- when 'variant_picker' -%}
-          {%- render 'variant-picker', product: product, form_id: product_form_id, update_url: false, hide_sold_out_variants: block.settings.hide_sold_out_variants, hide_size_chart: true, force_dropdown_as_block: true, block: block -%}
-
-        {%- when 'buy_buttons' -%}
-          {%- render 'buy-buttons', product: product, form_id: product_form_id, show_payment_button: block.settings.show_payment_button, button_size: 'lg' -%}
-      {%- endcase -%}
-    {%- endfor -%}
-  </div>
-</template>
-
 {% schema %}
 {
-  "name": "Product page",
-  "class": "shopify-section--main-product",
+  "name": "Featured product",
+  "class": "shopify-section--featured-product",
   "tag": "section",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
   "blocks": [
     {
       "type": "@app"
@@ -1106,10 +1096,9 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "default": true
     },
     {
-      "type": "checkbox",
-      "id": "show_fixed_add_to_cart",
-      "label": "Show add to cart on scroll",
-      "default": true
+      "type": "product",
+      "id": "product",
+      "label": "Product"
     },
     {
       "type": "header",
@@ -1198,13 +1187,13 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "id": "enable_video_autoplay",
       "label": "Enable video autoplay",
       "info": "Video are muted automatically to allow autoplay. Grid mode on desktop turn off autoplay.",
-      "default": false
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "enable_video_looping",
       "label": "Enable video looping",
-      "default": true
+      "default": false
     },
     {
       "type": "header",
@@ -1260,6 +1249,46 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "type": "color",
       "id": "input_text_color",
       "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product",
+      "blocks": [
+        {
+          "type": "vendor"
+        },
+        {
+          "type": "title"
+        },
+        {
+          "type": "badges"
+        },
+        {
+          "type": "price"
+        },
+        {
+          "type": "rating"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "description"
+        },
+        {
+          "type": "variant_picker"
+        },
+        {
+          "type": "quantity_selector"
+        },
+        {
+          "type": "buy_buttons"
+        },
+        {
+          "type": "pickup_availability"
+        }
+      ]
     }
   ]
 }
