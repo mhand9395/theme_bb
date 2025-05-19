@@ -54,38 +54,41 @@
 {%- if section.settings.show_fixed_add_to_cart and product.available and buy_buttons_block != blank -%}
   {%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
 
-  <product-quick-add form="{{ product_form_id }}" class="product-quick-add">
-    {%- assign button_label = 'product.general.add_to_cart_button' | t -%}
+<product-quick-add form="{{ product_form_id }}" class="product-quick-add">
+  <product-form form="{{ product_form_id }}">
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
-    <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
-      {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
-    </buy-buttons>
+      <!-- Optionnel : quantité -->
+      <quantity-input class="quantity" name="quantity">
+        <input type="number" name="quantity" value="1" min="1">
+      </quantity-input>
 
-    {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+      <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
+        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
+      </buy-buttons>
 
-    <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
-      {%- if image != blank -%}
-        <variant-media widths="80,160" form="{{ product_form_id }}">
-          {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
-        </variant-media>
-      {%- endif -%}
+      {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
-      <div class="v-stack gap-0.5">
-        {%- assign vendor_block = section.blocks | where: 'type', 'vendor' -%}
-
-        {%- if vendor_block != blank -%}
-          {%- render 'vendor' with product.vendor, class: 'text-xs' -%}
+      <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
+        {%- if image != blank -%}
+          <variant-media widths="80,160" form="{{ product_form_id }}">
+            {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
+          </variant-media>
         {%- endif -%}
 
-        <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
-        {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
-      </div>
+        <div class="v-stack gap-0.5">
+          <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
+          {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
+        </div>
 
-      <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
-        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
-      </buy-buttons>
-    </div>
-  </product-quick-add>
+        <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
+          {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
+        </buy-buttons>
+      </div>
+    </form>
+  </product-form>
+</product-quick-add>
 {%- endif -%}
 
 {%- comment -%}
