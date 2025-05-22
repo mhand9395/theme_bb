@@ -69,6 +69,7 @@
         "liquid_EDehBT",
         "liquid_ahTXWD"
       ],
+      "custom_css": [],
       "settings": {
         "full_width": true,
         "show_fixed_add_to_cart": true,
@@ -89,6 +90,7 @@
     },
     "custom_liquid_HXtQ6G": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
