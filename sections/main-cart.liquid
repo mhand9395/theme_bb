@@ -30,7 +30,7 @@
             ----------------------------------------------------------------------------------------------------------------
             ORDER SUMMARY
             ----------------------------------------------------------------------------------------------------------------
-            {%- endcomment -%}{%- comment -%}
+            {%- endcomment -%}
             <table class="order-summary">
               <thead class="order-summary__header">
                 <tr>
@@ -38,7 +38,7 @@
                   <th class="w-0">{{ 'customer.order.quantity' | t }}</th>
                   <th class="text-end">{{ 'customer.order.total' | t }}</th>
                 </tr>
-              </thead>{%- endcomment -%}
+              </thead>
 
               <tbody class="order-summary__body">
                 {%- for line_item in cart.items -%}
