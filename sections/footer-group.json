@@ -14,6 +14,15 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "newsletter_rMRzt4": {
+          "type": "newsletter",
+          "settings": {
+            "image_width": 150,
+            "heading_size": "h3",
+            "title": "Inscrivez-vous à notre newsletter",
+            "content": ""
+          }
+        },
         "links_tUYkma": {
           "type": "links",
           "settings": {
@@ -31,6 +40,7 @@
         }
       },
       "block_order": [
+        "newsletter_rMRzt4",
         "links_tUYkma",
         "text"
       ],
