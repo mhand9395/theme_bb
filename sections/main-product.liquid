@@ -39,7 +39,40 @@
   }
 </style>
 
+<div {% render 'section-properties', tight: true %}>
+  <div class="product">
+    {%- if product.media.size > 0 -%}
+      {%- render 'product-gallery', product: product -%}
+    {%- endif -%}
 
+    {%- render 'product-info', product: product, update_url: true -%}
+    <div class="bundle-save">
+  <h3>Packez & Économisez</h3>
+
+  <!-- Sélection de la pointure -->
+  
+
+  <form method="post" action="/cart/add" id="bundleForm">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <input type="hidden" name="quantity" id="finalQuantity" value="2">
+
+    <!-- Propriétés personnalisées visibles dans le panier -->
+    <input type="hidden" name="properties[Pointure]" id="propSize">
+    <input type="hidden" name="properties[Nombre de paires]" id="propQty">
+    <input type="hidden" name="properties[Prix unitaire]" id="propPrice">
+    <input type="hidden" name="properties[Prix original]" id="propOldPrice">
+    <input type="hidden" name="properties[Total remisé]" id="propTotal">
+
+    
+
+
+      </div>
+    </div>
+
+    <p class="savings-message" id="savingsMessage">🎉 Vous économisez 9,92€ sur cette commande</p>
+
+   </form>
+</div>
 
 <style>
   .bundle-save {
