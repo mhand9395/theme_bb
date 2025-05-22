@@ -40,7 +40,81 @@
 </style>
 
 <div {% render 'section-properties', tight: true %}>
-  
+  <div class="product">
+    {%- if product.media.size > 0 -%}
+      {%- render 'product-gallery', product: product -%}
+    {%- endif -%}
+
+    {%- render 'product-info', product: product, update_url: true -%}
+    
+  <h3>Packez & Économisez</h3>
+
+  <!-- Sélection de la pointure -->
+  <div class="size-select">
+    <label for="bundleSize">Pointure :</label>
+    <select id="bundleSize" required>
+      <option value="">Sélectionnez votre pointure</option>
+      <option value="H 36-37 | F 35-36">H 36-37 | F 35-36</option>
+      <option value="H 38-39 | F 37-38">H 38-39 | F 37-38</option>
+      <option value="H 40-41 | F 39-40">H 40-41 | F 39-40</option>
+      <option value="H 42-43 | F 41-42">H 42-43 | F 41-42</option>
+      <option value="H 44-45 | F 43-44">H 44-45 | F 43-44</option>
+      <option value="H 46-47">H 46-47</option>
+      <option value="H 48-49">H 48-49</option>
+      <option value="H 50-51">H 50-51</option>
+    </select>
+  </div>
+
+  <form method="post" action="/cart/add" id="bundleForm">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <input type="hidden" name="quantity" id="finalQuantity" value="2">
+
+    <!-- Propriétés personnalisées visibles dans le panier -->
+    <input type="hidden" name="properties[Pointure]" id="propSize">
+    <input type="hidden" name="properties[Nombre de paires]" id="propQty">
+    <input type="hidden" name="properties[Prix unitaire]" id="propPrice">
+    <input type="hidden" name="properties[Prix original]" id="propOldPrice">
+    <input type="hidden" name="properties[Total remisé]" id="propTotal">
+
+    <div class="bundle-options">
+      <div class="bundle-option" data-qty="1" data-price="27.95">
+        <p class="badge">Prix standard</p>
+        <strong>1 Paire</strong>
+        <p class="desc">Économisez 26,3%</p>
+        <p class="price">27,95€</p>
+      </div>
+
+      <div class="bundle-option active" data-qty="2" data-price="22.99">
+        <p class="badge">Le plus populaire</p>
+        <strong>2 Paires</strong>
+        <p class="desc">Économisez 39,4%</p>
+        <p class="price">22,99€</p>
+        <p class="old-price">37,95€</p>
+      </div>
+
+      <div class="bundle-option" data-qty="3" data-price="19.99" data-multiple="true">
+        <p class="badge">Meilleure offre</p>
+        <strong>3 Paires</strong>
+        <p class="desc">Économisez 47,3%</p>
+        <p class="price">19,99€</p>
+        <p class="old-price">37,95€</p>
+        <div class="quantity-container">
+          <label for="bundleQuantity">Quantité :</label>
+          <input type="number" id="bundleQuantity" min="3" value="3">
+        </div>
+      </div>
+    </div>
+
+    <div class="price-total" id="priceTotal">
+      <span class="green">Total : 45,98€</span>
+      <span class="red">75,90€</span>
+      <span class="percent">-39%</span>
+    </div>
+
+    <p class="savings-message" id="savingsMessage">🎉 Vous économisez 9,92€ sur cette commande</p>
+
+    <button type="submit" class="add-to-cart-button">AJOUTER AU PANIER</button>
+  </form>
 </div>
 
 <style>
