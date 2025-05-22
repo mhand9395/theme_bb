@@ -40,8 +40,8 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "{{shop.brand.logo}}",
-        "logo_max_width": 120,
+        "logo": "shopify://shop_images/PasDeLune.png",
+        "logo_max_width": 190,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",
         "sidebar_menu": "main-menu",
