@@ -46,202 +46,46 @@
     {%- endif -%}
 
     {%- render 'product-info', product: product, update_url: true -%}
-  
-
-  <!-- Sélection de la pointure -->
-  
-
-  <form method="post" action="/cart/add" id="bundleForm">
-    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <input type="hidden" name="quantity" id="finalQuantity" value="2">
-
-    <!-- Propriétés personnalisées visibles dans le panier -->
-    <input type="hidden" name="properties[Pointure]" id="propSize">
-    <input type="hidden" name="properties[Nombre de paires]" id="propQty">
-    <input type="hidden" name="properties[Prix unitaire]" id="propPrice">
-    <input type="hidden" name="properties[Prix original]" id="propOldPrice">
-    <input type="hidden" name="properties[Total remisé]" id="propTotal">
-
-
-    <p class="savings-message" id="savingsMessage">🎉 Vous économisez 9,92€ sur cette commande</p>
-
-  </form>
-</div>
-
-<style>
-  .bundle-save {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
-    font-family: 'Segoe UI', sans-serif;
-  }
-  .bundle-save h3 { text-align: center; font-size: 18px; font-weight: 800; color: #1f2937; text-transform: uppercase; margin-bottom: 24px; }
-  .size-select { max-width: 200px; margin: 0 auto 24px; }
-  .size-select label { font-weight: 700; font-size: 14px; margin-bottom: 6px; color: #374151; text-align: center; display: block; }
-  .size-select select { width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px; background-color: #f9fafb; color: #111827; }
-
-  .bundle-options { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-  .bundle-option { flex: 1 1 200px; background-color: #f9fafb; border: 2px solid transparent; border-radius: 16px; padding: 20px 16px; text-align: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04); }
-  .bundle-option:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05); }
-  .bundle-option.active { border-color: #3b82f6; box-shadow: 0 0 0 2px #3b82f6 inset; }
-  .badge { background-color: #e0e7ff; color: #3730a3; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; display: inline-block; }
-  .bundle-option strong { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 4px; display: block; }
-  .desc { font-size: 14px; color: #374151; margin-bottom: 8px; }
-  .price { font-size: 20px; font-weight: 700; color: #16a34a; }
-  .old-price { font-size: 14px; text-decoration: line-through; color: #9ca3af; }
-  .quantity-container { display: none; align-items: center; justify-content: center; margin-top: 12px; gap: 10px; }
-  .quantity-container input { width: 70px; padding: 10px; font-size: 15px; border-radius: 8px; border: 1px solid #d1d5db; text-align: center; }
-
-  .price-total { margin-top: 24px; font-size: 18px; font-weight: 700; text-align: center; }
-  .price-total .green { color: #16a34a; font-size: 20px; }
-  .price-total .red, .price-total .percent { display: none; }
-  .price-total.show-discount .red, .price-total.show-discount .percent { display: inline-block; }
-  .price-total .red { color: #ef4444; text-decoration: line-through; margin-left: 10px; font-size: 15px; }
-  .price-total .percent { color: #16a34a; font-size: 14px; font-weight: 600; background-color: #dcfce7; padding: 4px 10px; border-radius: 999px; margin-left: 10px; }
-
-  .savings-message { margin-top: 8px; font-size: 14px; color: #16a34a; font-weight: 600; text-align: center; display: none; }
-  .add-to-cart-button { margin-top: 20px; display: block; width: 100%; background: linear-gradient(90deg, #3b82f6, #2563eb); color: white; padding: 16px; font-size: 16px; font-weight: bold; text-transform: uppercase; text-align: center; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 6px 14px rgba(59, 130, 246, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .add-to-cart-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4); }
-</style>
-
-<script>
-  const options = document.querySelectorAll('.bundle-option');
-  const qtyInput = document.getElementById('bundleQuantity');
-  const qtyContainer = document.querySelector('.quantity-container');
-  const priceTotal = document.getElementById('priceTotal');
-  const finalQty = document.getElementById('finalQuantity');
-  const savingsMessage = document.getElementById('savingsMessage');
-  const propPrice = document.getElementById('propPrice');
-  const propOldPrice = document.getElementById('propOldPrice');
-  const propQty = document.getElementById('propQty');
-  const propTotal = document.getElementById('propTotal');
-  const propSize = document.getElementById('propSize');
-  const sizeSelect = document.getElementById('bundleSize');
-  const form = document.getElementById('bundleForm');
-
-  let selectedPrice = 22.99;
-  let quantity = 2;
-  const fullPrice = 37.95;
-  let isMultiple = false;
-
-  function updateTotal() {
-    const total = selectedPrice * quantity;
-    const full = fullPrice * quantity;
-    const savings = (full - total).toFixed(2).replace('.', ',');
-    const totalFormatted = total.toFixed(2).replace('.', ',');
-    const fullFormatted = full.toFixed(2).replace('.', ',');
-    const percent = Math.round((1 - total / full) * 100);
-
-    priceTotal.classList.toggle('show-discount', percent > 0);
-    priceTotal.querySelector('.green').textContent = `Total : ${totalFormatted}€`;
-    priceTotal.querySelector('.red').textContent = `${fullFormatted}€`;
-    priceTotal.querySelector('.percent').textContent = `-${percent}%`;
-
-    savingsMessage.style.display = percent > 0 ? 'block' : 'none';
-    if (percent > 0) {
-      savingsMessage.textContent = `🎉 Vous économisez ${savings}€ sur cette commande`;
-    }
-
-    finalQty.value = quantity;
-    propQty.value = quantity;
-    propPrice.value = `${selectedPrice.toFixed(2).replace('.', ',')}€`;
-    propOldPrice.value = `${fullPrice.toFixed(2).replace('.', ',')}€`;
-    propTotal.value = `${totalFormatted}€`;
-  }
-
-  options.forEach(option => {
-    option.addEventListener('click', function () {
-      options.forEach(el => el.classList.remove('active'));
-      this.classList.add('active');
-
-      selectedPrice = parseFloat(this.getAttribute('data-price'));
-      isMultiple = this.getAttribute('data-multiple') === 'true';
-
-      if (isMultiple) {
-        qtyContainer.style.display = 'flex';
-        qtyInput.disabled = false;
-        quantity = Math.max(3, parseInt(qtyInput.value));
-        qtyInput.value = quantity;
-      } else {
-        qtyContainer.style.display = 'none';
-        qtyInput.disabled = true;
-        quantity = parseInt(this.getAttribute('data-qty'));
-      }
-
-      updateTotal();
-    });
-  });
-
-  qtyInput.addEventListener('input', function () {
-    let val = parseInt(this.value);
-    if (!isNaN(val)) {
-      if (val < 3) val = 3;
-      quantity = val;
-      qtyInput.value = val;
-      updateTotal();
-    }
-  });
-
-  sizeSelect.addEventListener('change', function () {
-    propSize.value = this.value;
-  });
-
-  form.addEventListener('submit', function (e) {
-    if (!sizeSelect.value) {
-      e.preventDefault();
-      alert("Veuillez sélectionner une pointure.");
-    }
-  });
-
-  propSize.value = sizeSelect.value;
-  updateTotal();
-</script>
-
   </div>
+</div>
 
 {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
 
 {%- if section.settings.show_fixed_add_to_cart and product.available and buy_buttons_block != blank -%}
   {%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
 
-<product-quick-add form="{{ product_form_id }}" class="product-quick-add">
-  <product-form form="{{ product_form_id }}">
-    <form method="post" action="/cart/add">
-      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+  <product-quick-add form="{{ product_form_id }}" class="product-quick-add">
+    {%- assign button_label = 'product.general.add_to_cart_button' | t -%}
 
-      <!-- Optionnel : quantité -->
-      <quantity-input class="quantity" name="quantity">
-        <input type="number" name="quantity" value="1" min="1">
-      </quantity-input>
+    <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
+      {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
+    </buy-buttons>
 
-      <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
-        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
-      </buy-buttons>
+    {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
-      {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+    <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
+      {%- if image != blank -%}
+        <variant-media widths="80,160" form="{{ product_form_id }}">
+          {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
+        </variant-media>
+      {%- endif -%}
 
-      <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
-        {%- if image != blank -%}
-          <variant-media widths="80,160" form="{{ product_form_id }}">
-            {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
-          </variant-media>
+      <div class="v-stack gap-0.5">
+        {%- assign vendor_block = section.blocks | where: 'type', 'vendor' -%}
+
+        {%- if vendor_block != blank -%}
+          {%- render 'vendor' with product.vendor, class: 'text-xs' -%}
         {%- endif -%}
 
-        <div class="v-stack gap-0.5">
-          <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
-          {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
-        </div>
-
-        <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
-          {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
-        </buy-buttons>
+        <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
+        {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
       </div>
-    </form>
-  </product-form>
-</product-quick-add>
+
+      <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
+        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
+      </buy-buttons>
+    </div>
+  </product-quick-add>
 {%- endif -%}
 
 {%- comment -%}
