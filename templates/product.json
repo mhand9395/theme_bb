@@ -28,22 +28,16 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "upsell_koala_bundles_bundle_app_block_3QhAbA": {
-          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+        "liquid_DXeChc": {
+          "type": "liquid",
           "settings": {
-            "product": "{{product}}"
+            "liquid": "<koala-deal product-id=\"{{product.id}}\"></koala-deal>"
           }
         },
         "liquid_6YgkMr": {
           "type": "liquid",
           "settings": {
             "liquid": "<style>\n  .benefits-list {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n    padding: 20px 0;\n    font-family: inherit;\n  }\n\n  .benefit-item {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    color: #1f2937;\n    font-size: 15px;\n  }\n\n  .benefit-item i {\n    font-size: 16px;\n    color: #36a2f7;\n  }\n\n  .benefit-item strong {\n    font-weight: 600;\n  }\n\n  @media screen and (max-width: 480px) {\n    .benefit-item {\n      font-size: 14px;\n    }\n  }\n</style>\n\n<ul class=\"benefits-list\">\n  <li class=\"benefit-item\">\n    <i>⚡</i> <span><strong>Soulagement immédiat</strong></span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🕐</i> <span><strong>Confort toute la journée</strong></span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🛡️</i> <span>Amorti des chocs</span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>👣</i> <span>Recommandé par des podologues</span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🔬</i> <span>Testé cliniquement</span>\n  </li>\n</ul>"
-          }
-        },
-        "upsell_koala_bundles_related_products_app_block_EJjQVC": {
-          "type": "shopify://apps/upsell-koala-bundles/blocks/related-products-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
-          "settings": {
-            "product": "{{product}}"
           }
         },
         "liquid_PUYzTW": {
@@ -69,9 +63,8 @@
         "title",
         "liquid_P3CzNU",
         "judge_me_reviews_preview_badge_YPcqLy",
-        "upsell_koala_bundles_bundle_app_block_3QhAbA",
+        "liquid_DXeChc",
         "liquid_6YgkMr",
-        "upsell_koala_bundles_related_products_app_block_EJjQVC",
         "liquid_PUYzTW",
         "liquid_EDehBT",
         "liquid_ahTXWD"
