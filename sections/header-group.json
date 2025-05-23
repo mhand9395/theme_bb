@@ -27,10 +27,10 @@
       ],
       "settings": {
         "enable_sticky": false,
-        "text_size": "text-xxs",
+        "text_size": "text-xs",
         "navigation_mode": "arrows",
         "scrolling_speed": 30,
-        "background": "#36a2f7",
+        "background": "#0079d6",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
