@@ -46,12 +46,6 @@
             "liquid": "<koala-deal product-id=\"{{product.id}}\"></koala-deal>"
           }
         },
-        "liquid_EPfVW7": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n  .custom-buttons-wrap {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n    margin-top: 20px;\n  }\n\n  .custom-button {\n    display: inline-block;\n    padding: 14px 24px;\n    border: none;\n    border-radius: 8px;\n    font-size: 16px;\n    font-weight: 600;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n    transition: background-color 0.2s ease;\n    font-family: 'Poppins', sans-serif;\n  }\n\n  .add-to-cart-button {\n    background-color: #1e3a8a;\n    color: white;\n  }\n\n  .add-to-cart-button:hover {\n    background-color: #3749a3;\n  }\n\n  .paypal-button {\n    background-color: #ffc439;\n    color: #111827;\n  }\n\n  .paypal-button:hover {\n    background-color: #ffb000;\n  }\n</style>\n\n<div class=\"custom-buttons-wrap\">\n  <!-- Ajouter au panier -->\n  <button type=\"submit\" name=\"add\" class=\"custom-button add-to-cart-button\">\n    🛒 Ajouter au panier\n  </button>\n\n  <!-- Acheter avec PayPal -->\n  <button type=\"submit\" name=\"checkout\" formnovalidate class=\"custom-button paypal-button\">\n    💳 Payer avec PayPal\n  </button>\n</div>"
-          }
-        },
         "buy_buttons_Qj4jW9": {
           "type": "buy_buttons",
           "settings": {
@@ -83,7 +77,6 @@
         "liquid_6YgkMr",
         "liquid_PUYzTW",
         "liquid_DXeChc",
-        "liquid_EPfVW7",
         "buy_buttons_Qj4jW9",
         "liquid_EDehBT",
         "liquid_ahTXWD"
