@@ -60,7 +60,7 @@
         "liquid_hEE4HN": {
           "type": "liquid",
           "settings": {
-            "liquid": "{%- if shop.enabled_payment_types.size > 0 -%}\n  <div class=\"v-stack gap-4\">\n    <span class=\"text-xs text-subdued text-center\">\n      {{ 'cart.general.we_accept' | t }}\n    </span>\n\n    <div class=\"h-stack gap-2 wrap justify-center\">\n      {%- for type in shop.enabled_payment_types -%}\n        {{- type | payment_type_svg_tag -}}\n      {%- endfor -%}\n    </div>\n  </div>\n{%- endif -%}"
+            "liquid": "<style>\n  .payment-icons-wrapper {\n    background-color: #f3f4f6;\n    border-radius: 12px;\n    padding: 16px 20px;\n    margin-top: 24px;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n    text-align: center;\n    max-width: 420px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  .payment-icons-wrapper span {\n    display: block;\n    font-size: 13px;\n    font-weight: 600;\n    color: #4b5563;\n    margin-bottom: 12px;\n  }\n\n  .payment-icons {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 10px;\n    align-items: center;\n  }\n\n  .payment-icons svg {\n    height: 24px;\n    transition: transform 0.2s ease;\n  }\n\n  .payment-icons svg:hover {\n    transform: scale(1.05);\n  }\n</style>\n\n<div class=\"payment-icons-wrapper\">\n  <span>Nous acceptons</span>\n  <div class=\"payment-icons\">\n    {%- for type in shop.enabled_payment_types -%}\n      {{- type | payment_type_svg_tag -}}\n    {%- endfor -%}\n  </div>\n</div>"
           }
         },
         "liquid_EDehBT": {
