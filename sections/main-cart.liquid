@@ -53,7 +53,14 @@
                     <td>{%- render 'line-item', line_item: line_item -%}</td>
 
 
-
+  <td class="hidden align-center text-center text-subdued sm:table-cell">
+    <line-item-quantity class="v-stack justify-center gap-2">
+      <input class="quantity-input" type="text" is="quantity-input" inputmode="numeric" {% if line_max_quantity != blank %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
+      <span class="text-xs">
+        <a href="{{ line_item.url_to_remove }}" class="link">{{ 'cart.order.remove' | t }}</a>
+      </span>
+    </line-item-quantity>
+  </td>
 
   <td class="hidden align-center text-subdued text-end sm:table-cell">{{ line_item.final_line_price | money }}</td>
 </tr>
