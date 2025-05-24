@@ -50,6 +50,8 @@
 
                   <tr>
   <td class="text-subdued">{{ line_item.product.title }}</td>
+                    <td>{%- render 'line-item', line_item: line_item -%}</td>
+
 
   <td class="hidden align-center text-center text-subdued sm:table-cell">
     <line-item-quantity class="v-stack justify-center gap-2">
