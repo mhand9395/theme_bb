@@ -57,6 +57,12 @@
             "payment_button_text_color": "#ffffff"
           }
         },
+        "liquid_hEE4HN": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- if shop.enabled_payment_types.size > 0 -%}\n  <div class=\"v-stack gap-4\">\n    <span class=\"text-xs text-subdued text-center\">\n      {{ 'cart.general.we_accept' | t }}\n    </span>\n\n    <div class=\"h-stack gap-2 wrap justify-center\">\n      {%- for type in shop.enabled_payment_types -%}\n        {{- type | payment_type_svg_tag -}}\n      {%- endfor -%}\n    </div>\n  </div>\n{%- endif -%}"
+          }
+        },
         "liquid_EDehBT": {
           "type": "liquid",
           "settings": {
@@ -78,6 +84,7 @@
         "liquid_PUYzTW",
         "liquid_DXeChc",
         "buy_buttons_Qj4jW9",
+        "liquid_hEE4HN",
         "liquid_EDehBT",
         "liquid_ahTXWD"
       ],
