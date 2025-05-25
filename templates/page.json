@@ -28,10 +28,24 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "custom_liquid_8Xd6AK": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Texte descriptif -->\n  <p style=\"margin-bottom: 16px;\">\n    C’est une approche révolutionnaire qui <strong>réaligne votre pied pour soulager la tension sur le fascia plantaire</strong>.\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    Elle fonctionne grâce à un <strong>soutien ciblé de la voûte plantaire</strong> et une <strong>absorption des chocs</strong> qui répartit la pression uniformément…\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    Et en amortissant le talon et l’avant-pied, elle aide à <strong>éviter toute irritation supplémentaire</strong>, réduisant la douleur à chaque pas.\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    Le seul problème ? Ce niveau de soutien n’était disponible que via des semelles orthopédiques sur-mesure coûteuses.\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    J’ai donc collaboré avec une startup de santé plantaire appelée <strong>PasDeLune®</strong>.\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    Ils sont réputés pour concevoir certaines des meilleures semelles anti-douleur, ayant déjà aidé <strong>plus de 100 000 hommes et femmes</strong> à travers l’Europe.\n  </p>\n  \n  <p style=\"margin-bottom: 16px;\">\n    Ensemble, nous avons enfin trouvé la solution.\n  </p>\n\n  <!-- Titre produit -->\n  <h2 style=\"font-size: 26px; font-weight: 800; margin: 32px 0 24px 0; color: #f97316;\">\n    Présentation des semelles PasDeLune® Massage\n  </h2>\n\n  <!-- Vidéo du produit -->\n  <div style=\"margin-bottom: 24px;\">\n    <video autoplay muted loop playsinline style=\"width: 100%; border-radius: 8px;\">\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/47da81e0b3224cc998444c634ea227a1.mp4\" type=\"video/mp4\">\n      Votre navigateur ne prend pas en charge la vidéo.\n    </video>\n  </div>\n\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_Qiran9"
+    "custom_liquid_Qiran9",
+    "custom_liquid_8Xd6AK"
   ]
 }
