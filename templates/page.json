@@ -11,12 +11,41 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_width": "80ch"
+      }
+    },
+    "custom_liquid_3fx4mY": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; width: 100%; padding: 20px 0;\">\n  <h2 style=\"font-size: 26px; font-weight: 700; color: #1e1e1e; margin-bottom: 12px;\">\n    Un kinésithérapeute renommé avertit : \n    <span style=\"font-weight: 800; color: #2b2b2b;\">N’essayez plus rien contre les douleurs aux pieds avant d’avoir vu ceci</span>\n  </h2>\n  <p style=\"font-size: 18px; line-height: 1.6; color: #333333;\">\n    <span style=\"background-color: #f4efe8; color: #1e1e1e; font-weight: 600; padding: 2px 4px; border-radius: 4px;\">\n      Si vous souffrez de douleurs aiguës au talon ou de tensions dans la voûte plantaire\n    </span>, ou si chaque pas vous donne l'impression de marcher sur du verre brisé, lisez cet article avant d’essayer quoi que ce soit d’autre.\n  </p>\n  <p style=\"margin-top: 12px; font-size: 16px; color: #666666;\">\n    ⭐️ <span style=\"color: #5779c1;\">1 169 avis</span>\n  </p>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_NcLiha": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div style=\"margin-top: 20px; border-radius: 12px; overflow: hidden;\">\n    <video autoplay muted loop playsinline style=\"width: 100%; height: auto; border-radius: 12px;\">\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/ccf3071d6f3c43c3ad339558bb35dd7c.mp4\" type=\"video/mp4\">\n      Votre navigateur ne prend pas en charge la lecture vidéo.\n    </video>\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_3fx4mY",
+    "custom_liquid_NcLiha"
   ]
 }
