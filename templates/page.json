@@ -67,6 +67,32 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "custom_liquid_pcWbEV": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .featured-in {\n    background-color: #ffffff;\n    color: #000000;\n    padding: 5px 20px 10px 20px; /* marge haut + bas encore plus réduite */\n    text-align: center;\n  }\n\n  .featured-in h2 {\n    font-size: 14px;\n    letter-spacing: 2px;\n    font-weight: bold;\n    text-transform: uppercase;\n    margin: 0 0 8px 0; /* petite marge sous le titre */\n  }\n\n  .featured-logos {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 24px;\n    flex-wrap: wrap;\n  }\n\n  .featured-logo {\n    max-height: 70px;\n    max-width: 140px;\n    object-fit: contain;\n    transition: transform 0.3s ease;\n  }\n\n  .featured-logo:hover {\n    transform: scale(1.1);\n  }\n\n  @media screen and (max-width: 768px) {\n    .featured-logo {\n      max-height: 50px;\n      max-width: 110px;\n    }\n  }\n</style>\n\n<div class=\"featured-in\">\n  <h2>VU DANS</h2>\n  <div class=\"featured-logos\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/madame.png?v=1747575515\" alt=\"Madame Figaro\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/grazia.png?v=1747575514\" alt=\"Grazia\" class=\"featured-logo\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/vogue.png?v=1747575514\" alt=\"Vogue\" class=\"featured-logo\">\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_BgQ9Fm": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Intro -->\n  <p style=\"margin-bottom: 16px;\">\n    Maintenant, vous avez sûrement deux grandes questions…\n  </p>\n\n  <!-- Titre -->\n  <h2 style=\"font-size: 22px; font-weight: 800; margin-bottom: 16px;\">\n    Ces semelles <span style=\"text-decoration: underline;\">ont aidé des milliers de personnes</span> à soulager leur fasciite plantaire et leurs douleurs aux pieds\n  </h2>\n\n  <!-- Image before/after centrée -->\n  <div style=\"margin: 24px auto; text-align: center;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/translated_image_3.png?v=1748212894\" alt=\"Avant / Après semelles PasDeLune®\" style=\"width: 100%; max-width: 600px; border-radius: 8px; display: block; margin: 0 auto;\">\n  </div>\n\n  <!-- Texte suite -->\n  <p style=\"margin-bottom: 16px;\">\n    Et je suis convaincu que ça va <strong>vous aider aussi</strong>.\n  </p>\n\n  <!-- Imaginons... -->\n  <p style=\"font-weight: 700; margin-bottom: 12px;\">Imaginez simplement...</p>\n\n  <!-- Liste bleue avec croix rouges -->\n  <div style=\"background-color: #e6f4f9; padding: 16px; border-radius: 8px; font-size: 16px; line-height: 1.6; margin-bottom: 20px;\">\n    <p style=\"margin: 0;\">❌ Plus de pieds douloureux en fin de journée.</p>\n    <p style=\"margin: 0;\">❌ Plus d’irritation avec des chaussures sans soutien.</p>\n    <p style=\"margin: 0;\">❌ Plus de douleurs aiguës au talon dès le réveil.</p>\n  </div>\n\n  <!-- Conclusion -->\n  <p><strong>Tout cela est possible avec les semelles PasDeLune®.</strong></p>\n\n  <p style=\"margin-top: 12px;\">\n    Le meilleur ? Elles commencent à agir dès que vous les glissez dans vos chaussures.\n  </p>\n\n  <p>\n    Il vous suffit de les placer dans vos paires préférées... et elles font le travail à chaque pas.\n  </p>\n\n  <p style=\"margin-top: 24px;\">\n    Maintenant, je sais que vous avez probablement deux grandes questions…\n  </p>\n\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -74,6 +100,8 @@
     "custom_liquid_Qiran9",
     "custom_liquid_8Xd6AK",
     "custom_liquid_UmQ8Kt",
-    "custom_liquid_BjAXQk"
+    "custom_liquid_BjAXQk",
+    "custom_liquid_pcWbEV",
+    "custom_liquid_BgQ9Fm"
   ]
 }
