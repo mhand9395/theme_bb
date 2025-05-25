@@ -16,79 +16,14 @@
         "content_width": "80ch"
       }
     },
-    "custom_liquid_3fx4mY": {
+    "custom_liquid_Qiran9": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; width: 100%; padding: 20px 0;\">\n  <h2 style=\"font-size: 26px; font-weight: 700; color: #1e1e1e; margin-bottom: 12px;\">\n    Un kinésithérapeute renommé avertit : \n    <span style=\"font-weight: 800; color: #2b2b2b;\">N’essayez plus rien contre les douleurs aux pieds avant d’avoir vu ceci</span>\n  </h2>\n  <p style=\"font-size: 18px; line-height: 1.6; color: #333333;\">\n    <span style=\"background-color: #f4efe8; color: #1e1e1e; font-weight: 600; padding: 2px 4px; border-radius: 4px;\">\n      Si vous souffrez de douleurs aiguës au talon ou de tensions dans la voûte plantaire\n    </span>, ou si chaque pas vous donne l'impression de marcher sur du verre brisé, lisez cet article avant d’essayer quoi que ce soit d’autre.\n  </p>\n  <p style=\"margin-top: 12px; font-size: 16px; color: #666666;\">\n    ⭐️ <span style=\"color: #5779c1;\">1 169 avis</span>\n  </p>\n</div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_NcLiha": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"margin-top: 20px; border-radius: 12px; overflow: hidden;\">\n    <video autoplay muted loop playsinline style=\"width: 100%; height: auto; border-radius: 12px;\">\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/ccf3071d6f3c43c3ad339558bb35dd7c.mp4\" type=\"video/mp4\">\n      Votre navigateur ne prend pas en charge la lecture vidéo.\n    </video>\n  </div>\n</div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_h3Tf9z": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 720px; margin: auto; padding: 20px 0; color: #1e1e1e;\">\n  <!-- En-tête auteur -->\n  <div style=\"display: flex; align-items: center; margin-bottom: 16px;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/docteur-medecine.jpg?v=1748201842\" alt=\"Dr. Jeremy Campbell\" style=\"width: 48px; height: 48px; border-radius: 50%; object-fit: cover; margin-right: 12px;\">\n    <div>\n      <p style=\"margin: 0; font-weight: 600; color: #007a5a;\">Par Dr. Jeremy Campbell <span style=\"color: #4b5563;\">· 25 mai 2025</span></p>\n    </div>\n  </div>\n\n  <!-- Texte intro -->\n  <p>Bonjour, je m’appelle Dr. Campbell, kinésithérapeute diplômé basé à Dublin.</p>\n  <p>Avec plus de 10 ans d’expérience clinique et plus de 10 000 heures de pratique,</p>\n  <p>j’ai aidé plus de 1 100 patients souffrant de divers problèmes aux pieds…</p>\n\n  <!-- Encadré avec les douleurs -->\n  <div style=\"background-color: #e6f4f9; padding: 16px; border-radius: 8px; margin: 20px 0;\">\n    <p style=\"margin: 0; font-weight: 600;\">✅ Fasciite plantaire</p>\n    <p style=\"margin: 0; font-weight: 600;\">✅ Neuropathie</p>\n    <p style=\"margin: 0; font-weight: 600;\">✅ Pieds plats & arches trop hautes</p>\n    <p style=\"margin: 0; font-weight: 600;\">✅ Douleurs aux genoux, talons & dos</p>\n  </div>\n\n  <!-- Texte final -->\n  <p>Vous nommez un problème...</p>\n  <p>Je l’ai vu.</p>\n  <p>Du simple inconfort aux douleurs chroniques…</p>\n</div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_GPFbyK": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Titre -->\n  <h2 style=\"font-size: 28px; font-weight: 800; margin-bottom: 24px;\">\n    Fasciite plantaire si douloureuse que chaque pas donnait l’impression de marcher sur du verre brisé\n  </h2>\n\n  <!-- Vidéo pleine largeur -->\n  <div style=\"margin-bottom: 24px;\">\n    <video autoplay muted loop playsinline style=\"width: 100%; border-radius: 8px;\">\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/680bc8e8db0844879497b0f0abbe0e80.mp4\" type=\"video/mp4\">\n      Votre navigateur ne prend pas en charge la vidéo.\n    </video>\n  </div>\n\n  <!-- Texte -->\n  <p style=\"margin-bottom: 12px;\">Mais ce n’est que cette année que j’ai enfin percé le secret pour soulager la <strong>fasciite plantaire</strong>.</p>\n  <p style=\"margin-bottom: 12px;\">Tout a commencé par une <strong>découverte révolutionnaire</strong> que j’ai faite en début d’année.</p>\n  <p>Une nuit, en étudiant des publications scientifiques sur la fasciite plantaire, je suis tombé sur quelque chose qui m’a <strong>choqué</strong>.</p>\n\n</div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_xxNKbL": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Titre -->\n  <h2 style=\"font-size: 26px; font-weight: 800; margin-bottom: 24px;\">\n    La véritable cause choquante de la fasciite plantaire\n  </h2>\n\n  <!-- Image -->\n  <div style=\"margin-bottom: 24px;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/translated_image_2.png?v=1748202188\" alt=\"Anatomie de la fasciite plantaire\" style=\"width: 100%; border-radius: 8px;\">\n  </div>\n\n  <!-- Texte -->\n  <p><strong>Et si je vous disais que les douleurs vives dans vos talons et vos voûtes plantaires ne sont pas dues à la malchance… mais à vos chaussures ?</strong></p>\n\n  <p>Ça semble contre-intuitif, mais c’est vrai.</p>\n\n  <p>La majorité des chaussures sur le marché aujourd’hui sont <strong>mal conçues, rigides, et sans réel soutien</strong> — et c’est la <strong>vraie raison</strong> pour laquelle tant de gens souffrent de <strong>fasciite plantaire, douleurs aux talons et inconfort sous la voûte plantaire</strong>.</p>\n\n  <p>Pendant des milliers d’années, nos pieds étaient souples, nus et naturellement faits pour absorber les chocs. <strong>Mais aujourd’hui ? Les chaussures ont tout changé.</strong></p>\n\n  <p>Elles sont pensées pour le style, pas pour le soutien — forçant vos pieds dans des positions anormales et <strong>n’offrant aucun vrai soutien ni amorti.</strong></p>\n\n  <p>Au lieu de répartir la pression de manière uniforme, ces <strong>semelles plates, dures et bon marché</strong> concentrent tout l’effort sur votre fascia plantaire — <strong>le tissu qui soutient votre voûte plantaire.</strong></p>\n\n  <p><strong>Ce stress surcharge vos talons et arches, provoquant des micro-déchirures, de l’inflammation et des douleurs aiguës.</strong></p>\n\n  <p>Et même si vous essayez de corriger cela avec des chaussures dites \"confortables\", elles n’apportent qu’un <strong>soulagement temporaire</strong> — tout en <strong>affaiblissant vos muscles plantaires</strong>, aggravant la fasciite à long terme.</p>\n\n</div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_4PXRDd": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Image principale -->\n  <div style=\"margin-bottom: 24px;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/1726063359257_2_1_76c9ea6a-c93e-43c1-8fd7-555ace925f7d.jpg?v=1748202353\" alt=\"Chaussures inconfortables\" style=\"width: 100%; border-radius: 8px;\">\n  </div>\n\n  <!-- Texte -->\n  <p style=\"margin-bottom: 16px;\"><strong>Voici la mauvaise nouvelle…</strong></p>\n\n  <p style=\"margin-bottom: 16px;\">\n    À mesure que votre fascia plantaire continue de se tendre et de se déchirer, <strong>l’inflammation s’aggrave</strong>, transformant chaque pas en un véritable supplice — <strong>comme marcher sur du verre brisé</strong>.\n  </p>\n\n  <p style=\"margin-bottom: 16px;\">\n    Et c’est exactement pourquoi <strong>les solutions populaires comme les chaussures molletonnées, les massages ou les poches de glace</strong> ne résolvent jamais vraiment le problème — car elles <strong>ne s’attaquent pas à la vraie cause</strong> : le <strong>manque de soutien de la voûte plantaire</strong> et une <strong>mauvaise répartition du poids</strong> qui exercent une pression constante sur votre fascia plantaire.\n  </p>\n\n  <!-- Grille 2x2 d’images -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px;\">\n    <div style=\"flex: 1 1 calc(50% - 8px);\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/gempages_558298549507326878-0b476fe0-eec7-443c-91f1-dbdaec822ead.jpg?v=1748202352\" alt=\"Remèdes inefficaces 1\" style=\"width: 100%; border-radius: 8px;\">\n    </div>\n    <div style=\"flex: 1 1 calc(50% - 8px);\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/gempages_558298549507326878-0b476fe0-eec7-443c-91f1-dbdaec822ead.jpg?v=1748202352\" alt=\"Remèdes inefficaces 2\" style=\"width: 100%; border-radius: 8px;\">\n    </div>\n    <div style=\"flex: 1 1 calc(50% - 8px);\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/gempages_558298549507326878-0b476fe0-eec7-443c-91f1-dbdaec822ead.jpg?v=1748202352\" alt=\"Remèdes inefficaces 3\" style=\"width: 100%; border-radius: 8px;\">\n    </div>\n    <div style=\"flex: 1 1 calc(50% - 8px);\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/gempages_558298549507326878-0b476fe0-eec7-443c-91f1-dbdaec822ead.jpg?v=1748202352\" alt=\"Remèdes inefficaces 4\" style=\"width: 100%; border-radius: 8px;\">\n    </div>\n  </div>\n\n</div>",
+        "liquid": "<div style=\"font-family: 'Helvetica Neue', sans-serif; max-width: 900px; margin: auto; padding: 40px 0; color: #1e1e1e;\">\n\n  <!-- Bloc 1 : Avertissement + vidéo -->\n  <div style=\"padding-bottom: 40px;\">\n    <h2 style=\"font-size: 26px; font-weight: 700; margin-bottom: 12px;\">\n      Un kinésithérapeute renommé avertit : \n      <span style=\"font-weight: 800; color: #2b2b2b;\">N’essayez plus rien contre les douleurs aux pieds avant d’avoir vu ceci</span>\n    </h2>\n    <p style=\"font-size: 18px; line-height: 1.6;\">\n      <span style=\"background-color: #f4efe8; font-weight: 600; padding: 2px 4px; border-radius: 4px;\">\n        Si vous souffrez de douleurs aiguës au talon ou de tensions dans la voûte plantaire\n      </span>, ou si chaque pas vous donne l'impression de marcher sur du verre brisé, lisez cet article avant d’essayer quoi que ce soit d’autre.\n    </p>\n    <p style=\"margin-top: 12px; font-size: 16px; color: #666666;\">\n      ⭐️ <span style=\"color: #5779c1;\">1 169 avis</span>\n    </p>\n    <div style=\"margin-top: 20px; border-radius: 12px; overflow: hidden;\">\n      <video autoplay muted loop playsinline style=\"width: 100%; border-radius: 12px;\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/ccf3071d6f3c43c3ad339558bb35dd7c.mp4\" type=\"video/mp4\">\n        Votre navigateur ne prend pas en charge la lecture vidéo.\n      </video>\n    </div>\n  </div>\n\n  <!-- Bloc 2 : Présentation du docteur -->\n  <div style=\"padding-bottom: 40px;\">\n    <div style=\"display: flex; align-items: center; margin-bottom: 16px;\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/docteur-medecine.jpg?v=1748201842\" alt=\"Dr. Jeremy Campbell\" style=\"width: 48px; height: 48px; border-radius: 50%; object-fit: cover; margin-right: 12px;\">\n      <p style=\"margin: 0; font-weight: 600; color: #007a5a;\">Par Dr. Jeremy Campbell <span style=\"color: #4b5563;\">· 25 mai 2025</span></p>\n    </div>\n    <p>Bonjour, je m’appelle Dr. Campbell, kinésithérapeute diplômé basé à Dublin.</p>\n    <p>Avec plus de 10 ans d’expérience clinique et plus de 10 000 heures de pratique,</p>\n    <p>j’ai aidé plus de 1 100 patients souffrant de divers problèmes aux pieds…</p>\n    <div style=\"background-color: #e6f4f9; padding: 16px; border-radius: 8px; margin: 20px 0;\">\n      <p style=\"margin: 0; font-weight: 600;\">✅ Fasciite plantaire</p>\n      <p style=\"margin: 0; font-weight: 600;\">✅ Neuropathie</p>\n      <p style=\"margin: 0; font-weight: 600;\">✅ Pieds plats & arches trop hautes</p>\n      <p style=\"margin: 0; font-weight: 600;\">✅ Douleurs aux genoux, talons & dos</p>\n    </div>\n    <p>Vous nommez un problème...</p>\n    <p>Je l’ai vu.</p>\n    <p>Du simple inconfort aux douleurs chroniques…</p>\n  </div>\n\n  <!-- Bloc 3 : Témoignage -->\n  <div style=\"padding-bottom: 40px;\">\n    <h2 style=\"font-size: 28px; font-weight: 800; margin-bottom: 24px;\">\n      Fasciite plantaire si douloureuse que chaque pas donnait l’impression de marcher sur du verre brisé\n    </h2>\n    <div style=\"margin-bottom: 24px;\">\n      <video autoplay muted loop playsinline style=\"width: 100%; border-radius: 8px;\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/680bc8e8db0844879497b0f0abbe0e80.mp4\" type=\"video/mp4\">\n        Votre navigateur ne prend pas en charge la vidéo.\n      </video>\n    </div>\n    <p>Mais ce n’est que cette année que j’ai enfin percé le secret pour soulager la <strong>fasciite plantaire</strong>.</p>\n    <p>Tout a commencé par une <strong>découverte révolutionnaire</strong> que j’ai faite en début d’année.</p>\n    <p>Une nuit, en étudiant des publications scientifiques sur la fasciite plantaire, je suis tombé sur quelque chose qui m’a <strong>choqué</strong>.</p>\n  </div>\n\n  <!-- Bloc 4 : Cause réelle -->\n  <div style=\"padding-bottom: 40px;\">\n    <h2 style=\"font-size: 26px; font-weight: 800; margin-bottom: 24px;\">\n      La véritable cause choquante de la fasciite plantaire\n    </h2>\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/translated_image_2.png?v=1748202188\" alt=\"Anatomie de la fasciite plantaire\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px;\">\n    <p><strong>Et si je vous disais que les douleurs vives dans vos talons et vos voûtes plantaires ne sont pas dues à la malchance… mais à vos chaussures ?</strong></p>\n    <p>La majorité des chaussures sont <strong>mal conçues, rigides, et sans soutien</strong> — c’est la <strong>véritable cause</strong> de la fasciite plantaire, des douleurs aux talons et de l’inconfort quotidien.</p>\n    <p><strong>Ce stress surcharge vos talons et arches, provoquant des micro-déchirures, de l’inflammation et des douleurs aiguës.</strong></p>\n  </div>\n\n  <!-- Bloc 5 : Mauvaises solutions -->\n  <div style=\"padding-bottom: 40px;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/1726063359257_2_1_76c9ea6a-c93e-43c1-8fd7-555ace925f7d.jpg?v=1748202353\" alt=\"Chaussures inconfortables\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px;\">\n    <p><strong>Voici la mauvaise nouvelle…</strong></p>\n    <p>La douleur empire, les remèdes classiques échouent. <strong>Chaussures molletonnées, massages, poches de glace…</strong> ne s’attaquent pas à la racine du problème.</p>\n    <div style=\"display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px;\">\n      {% for i in (1..4) %}\n        <div style=\"flex: 1 1 calc(50% - 8px);\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/gempages_558298549507326878-0b476fe0-eec7-443c-91f1-dbdaec822ead.jpg?v=1748202352\" alt=\"Remèdes inefficaces {{ i }}\" style=\"width: 100%; border-radius: 8px;\">\n        </div>\n      {% endfor %}\n    </div>\n  </div>\n\n  <!-- Bloc 6 : Solution -->\n  <div>\n    <p><strong>Alors, quelle est la solution&nbsp;?</strong></p>\n    <p>Il faut <strong>soulager la pression sur le fascia plantaire</strong> et offrir un <strong>soutien biomécanique efficace</strong>.</p>\n    <p><strong>Mais comment&nbsp;?</strong> Oubliez les solutions coûteuses ou douloureuses. Il existe une approche simple et rapide…</p>\n    <h2 style=\"font-size: 24px; font-weight: 800; margin-top: 24px;\">\n      Soulagez la fasciite plantaire chez vous en quelques secondes (sans changer vos habitudes)\n    </h2>\n    <div style=\"margin-bottom: 24px;\">\n      <video autoplay muted loop playsinline style=\"width: 100%; border-radius: 8px;\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/621d8b73c015417db6e7e1f553917134.mp4\" type=\"video/mp4\">\n        Votre navigateur ne prend pas en charge la vidéo.\n      </video>\n    </div>\n    <p style=\"font-size: 16px;\">\n      Tout cela est possible grâce à \n      <span style=\"background-color: #fef08a; font-weight: bold;\">“la technologie de soutien biomécanique de la voûte plantaire”</span>.\n    </p>\n  </div>\n\n</div>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -97,11 +32,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_3fx4mY",
-    "custom_liquid_NcLiha",
-    "custom_liquid_h3Tf9z",
-    "custom_liquid_GPFbyK",
-    "custom_liquid_xxNKbL",
-    "custom_liquid_4PXRDd"
+    "custom_liquid_Qiran9"
   ]
 }
