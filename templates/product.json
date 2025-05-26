@@ -43,7 +43,7 @@
         "liquid_WgBayc": {
           "type": "liquid",
           "settings": {
-            "liquid": "<p style=\"margin-top: 8px;\">\n <p style=\"margin-top: 8px;\">\n  <a href=\"/pages/a-propos\" style=\"color: #1e40af; text-decoration: underline;\">\n    Les raisons pour lesquelles les médecins vous recommandent absolument de porter nos semelles\n  </a>\n</p>"
+            "liquid": "<p style=\"margin-top: 8px;\">\n <p style=\"margin-top: 8px;\">\n  <a href=\"/pages/a-propos\" style=\"color: #1e40af; text-decoration: underline;\">\n    Les médecins sont formels : ne pas porter de semelles adaptées aggrave vos douleurs. Voici pourquoi.\n  </a>\n</p>"
           }
         },
         "liquid_DXeChc": {
