@@ -41,12 +41,6 @@
             "liquid": "<style>\n  .benefits-list {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n    padding: 0;\n    margin: 0;\n    font-family: inherit;\n  }\n\n  .benefit-item {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    color: #1f2937;\n    font-size: 15px;\n    margin: 0;\n    padding: 0;\n  }\n\n  .benefit-item i {\n    font-size: 16px;\n    color: #36a2f7;\n  }\n\n  .benefit-item strong {\n    font-weight: 600;\n  }\n\n  @media screen and (max-width: 480px) {\n    .benefit-item {\n      font-size: 14px;\n    }\n  }\n</style>\n\n<ul class=\"benefits-list\">\n  <li class=\"benefit-item\">\n    <i>⚡</i> <span><strong>Soulagement immédiat</strong></span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🕐</i> <span><strong>Confort toute la journée</strong></span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🛡️</i> <span>Amorti des chocs</span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>👣</i> <span>Recommandé par des podologues</span>\n  </li>\n  <li class=\"benefit-item\">\n    <i>🔬</i> <span>Testé cliniquement</span>\n  </li>\n</ul>"
           }
         },
-        "liquid_WgBayc": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<p style=\"margin-top: 8px;\">\n <p style=\"margin-top: 8px;\">\n  <a href=\"/pages/a-propos\" style=\"color: #1e40af; text-decoration: underline;\">\n    Les médecins sont formels : ne pas porter de semelles adaptées aggrave vos douleurs. Voici pourquoi.\n  </a>\n</p>"
-          }
-        },
         "liquid_PUYzTW": {
           "type": "liquid",
           "settings": {
@@ -107,7 +101,6 @@
         "liquid_QmVKG6",
         "liquid_P3CzNU",
         "liquid_6YgkMr",
-        "liquid_WgBayc",
         "liquid_PUYzTW",
         "liquid_QjVqeE",
         "liquid_DXeChc",
