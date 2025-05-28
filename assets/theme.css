@@ -9879,7 +9879,7 @@ split-lines {
   overflow: hidden;
 }
 
-/* Conteneur principal des deux boutons */
+/* Conteneur des boutons : en colonne et pleine largeur */
 .product-form__buttons {
   display: flex !important;
   flex-direction: column !important;
@@ -9887,33 +9887,21 @@ split-lines {
   gap: 1rem !important;
 }
 
-/* Conteneur PayPal externe */
-.paypal-button-container {
+/* Conteneur PayPal */
+.shopify-payment-button {
   width: 100% !important;
   max-width: 100% !important;
   display: block !important;
-  border-radius: 9999px !important;
+  margin-top: 1rem !important;
+  border-radius: 9999px !important; /* arrondi comme le bouton panier */
 }
 
-/* Ligne contenant le bouton PayPal */
-.paypal-button-row {
+/* Bouton PayPal lui-même */
+.shopify-payment-button__button {
   width: 100% !important;
-  display: block !important;
-  border-radius: 9999px !important;
-}
-
-/* Le "vrai" bouton PayPal */
-.paypal-button {
-  width: 100% !important;
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-  padding: 1.2rem 0 !important;
-  border-radius: 9999px !important;
+  padding: 1.2rem 0 !important; /* hauteur plus généreuse */
+  font-size: 1.1rem !important; /* augmenter la taille de la police */
+  font-weight: 600 !important; /* rendre le texte plus lisible */
+  border-radius: 9999px !important; /* même arrondi que bouton panier */
   text-align: center !important;
-}
-
-/* Texte à l'intérieur du bouton (souvent span ou div) */
-.paypal-button .paypal-button-text {
-  font-size: 1.1rem !important;
-  font-weight: bold !important;
 }
