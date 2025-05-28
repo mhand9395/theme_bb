@@ -55,8 +55,10 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
   </head>
 
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
+    console.log("Script de suppression du bouton Panier chargé");
+
     document.body.addEventListener('cart:notification:open', function () {
       const interval = setInterval(() => {
         const shadowHost = document.querySelector('cart-notification-drawer');
@@ -68,7 +70,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
         const formToCart = shadowRoot.querySelector('form[action="/cart"]');
         if (formToCart) {
           formToCart.style.display = 'none';
-          clearInterval(interval); // Stop une fois trouvé
+          clearInterval(interval);
         }
       }, 100);
     });
