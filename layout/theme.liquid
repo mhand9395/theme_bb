@@ -57,23 +57,19 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Attendre que le drawer soit ouvert
     const observer = new MutationObserver(() => {
       const drawer = document.querySelector('cart-notification-drawer');
       if (!drawer || !drawer.shadowRoot) return;
 
-      const buttonPanier = drawer.shadowRoot.querySelector('form[action="/cart"]');
-      if (buttonPanier) {
-        buttonPanier.remove(); // Supprimer proprement le bouton Panier
+      const btnPanier = drawer.shadowRoot.querySelector('a.button.button--secondary');
+      if (btnPanier) {
+        btnPanier.remove(); // Supprimer le bouton Panier
         console.log('🟡 Bouton Panier supprimé');
-        observer.disconnect(); // Stopper une fois supprimé
+        observer.disconnect(); // Stopper l'observation
       }
     });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 </script>
 
