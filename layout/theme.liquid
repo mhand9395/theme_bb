@@ -69,7 +69,9 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     observer.observe(document.body, { childList: true, subtree: true });
   });
 </script>
-
+<script>
+document.addEventListener('DOMContentLoaded',()=>{let s=document.createElement('style');s.innerHTML='button[name="checkout"]{width:100%;background:#fcd34d!important;color:#000!important;padding:1rem!important;text-align:center;font-weight:700;border-radius:9999px!important;font-size:16px;border:none;box-shadow:0 2px 4px rgba(0,0,0,0.1)}button[name="checkout"]:hover{background:#fbbf24!important}button[name="checkout"] div,.button__loader{color:#000!important}';document.head.appendChild(s);});
+</script>
 
   
   <body class="{% if settings.show_page_transition %}page-transition{% endif %} {% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
