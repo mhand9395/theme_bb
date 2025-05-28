@@ -68,7 +68,7 @@
         "buy_buttons_Qj4jW9": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": false,
+            "show_payment_button": true,
             "show_gift_card_recipient": true,
             "atc_button_background": "#3586f7",
             "atc_button_text_color": "#ffffff",
