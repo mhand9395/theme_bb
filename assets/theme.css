@@ -9906,20 +9906,3 @@ split-lines {
   text-align: center !important;
 
 
-  button[name="checkout"] {
-  background-color: #fdd835 !important;
-  color: black !important;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 9999px;
-  padding: 1.2rem 0;
-  width: 100% !important;
-  border: none;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-button[name="checkout"]:hover {
-  background-color: #fbc02d !important;
-}
-}
