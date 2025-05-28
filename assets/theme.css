@@ -9905,4 +9905,8 @@ split-lines {
   border-radius: 9999px !important; /* même arrondi que bouton panier */
   text-align: center !important;
 
+  cart-notification-drawer form[action="/cart"] {
+  display: none !important;
+}
+
 
