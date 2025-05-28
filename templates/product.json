@@ -65,6 +65,17 @@
             "liquid": "<koala-deal product-id=\"{{product.id}}\"></koala-deal>"
           }
         },
+        "buy_buttons_Qj4jW9": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#3586f7",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "#0451c1",
+            "payment_button_text_color": "#ffffff"
+          }
+        },
         "liquid_hEE4HN": {
           "type": "liquid",
           "settings": {
@@ -95,6 +106,7 @@
         "liquid_PUYzTW",
         "liquid_7fGFEB",
         "liquid_DXeChc",
+        "buy_buttons_Qj4jW9",
         "liquid_hEE4HN",
         "liquid_rQkdcG",
         "liquid_ahTXWD"
