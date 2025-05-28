@@ -65,17 +65,6 @@
             "liquid": "<koala-deal product-id=\"{{product.id}}\"></koala-deal>"
           }
         },
-        "buy_buttons_Qj4jW9": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "#3586f7",
-            "atc_button_text_color": "#ffffff",
-            "payment_button_background": "#0451c1",
-            "payment_button_text_color": "#ffffff"
-          }
-        },
         "liquid_hEE4HN": {
           "type": "liquid",
           "settings": {
@@ -84,6 +73,7 @@
         },
         "liquid_rQkdcG": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<style>\n  .countdown-container {\n    text-align: center;\n    font-family: 'Segoe UI', sans-serif;\n    margin-top: 20px;\n  }\n\n  .countdown-title {\n    font-size: 18px;\n    font-weight: 900;\n    margin-bottom: 10px;\n    letter-spacing: 1px;\n  }\n\n  .countdown-blocks {\n    display: flex;\n    justify-content: center;\n    gap: 12px;\n  }\n\n  .countdown-block {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 4px;\n  }\n\n  .countdown-value {\n    background-color: #38bdf8; /* bleu ciel */\n    color: white;\n    font-weight: bold;\n    font-size: 28px;\n    padding: 2px 16px;\n    border-radius: 12px;\n    min-width: 60px;\n    text-align: center;\n  }\n\n  .countdown-label {\n    font-size: 12px;\n    font-weight: bold;\n    color: #111827; /* noir */\n    text-transform: uppercase;\n  }\n</style>\n\n<div class=\"countdown-container\">\n  <div class=\"countdown-title\">DERNIERE CHANCE POUR PROFITER DES REDUCTIONS !</div>\n  <div class=\"countdown-blocks\" id=\"countdownTimer\">\n    <div class=\"countdown-block\">\n      <div class=\"countdown-value\" id=\"cd-hours\">--</div>\n      <div class=\"countdown-label\">Hours</div>\n    </div>\n    <div class=\"countdown-block\">\n      <div class=\"countdown-value\" id=\"cd-minutes\">--</div>\n      <div class=\"countdown-label\">Minutes</div>\n    </div>\n    <div class=\"countdown-block\">\n      <div class=\"countdown-value\" id=\"cd-seconds\">--</div>\n      <div class=\"countdown-label\">Seconds</div>\n    </div>\n  </div>\n</div>\n\n<script>\n  function startRepeatingCountdown() {\n    const hEl = document.getElementById('cd-hours');\n    const mEl = document.getElementById('cd-minutes');\n    const sEl = document.getElementById('cd-seconds');\n\n    function updateCountdown() {\n      const now = new Date();\n      const totalCycle = 8 * 60 * 60; // 8h = 28800s\n      const minCycle = 2 * 60 * 60;   // 2h = 7200s\n      const cycleRange = totalCycle - minCycle; // 21600s\n\n      const secondsSinceEpoch = Math.floor(now.getTime() / 1000);\n      const secondsInCycle = secondsSinceEpoch % cycleRange;\n      let remaining = totalCycle - secondsInCycle;\n\n      if (remaining < minCycle) {\n        remaining = totalCycle;\n      }\n\n      const hours = Math.floor(remaining / 3600);\n      const minutes = Math.floor((remaining % 3600) / 60);\n      const seconds = Math.floor(remaining % 60);\n\n      hEl.textContent = String(hours).padStart(2, '0');\n      mEl.textContent = String(minutes).padStart(2, '0');\n      sEl.textContent = String(seconds).padStart(2, '0');\n    }\n\n    updateCountdown();\n    setInterval(updateCountdown, 1000);\n  }\n\n  document.addEventListener('DOMContentLoaded', startRepeatingCountdown);\n</script>"
           }
@@ -105,7 +95,6 @@
         "liquid_PUYzTW",
         "liquid_7fGFEB",
         "liquid_DXeChc",
-        "buy_buttons_Qj4jW9",
         "liquid_hEE4HN",
         "liquid_rQkdcG",
         "liquid_ahTXWD"
@@ -132,7 +121,6 @@
     "custom_liquid_HXtQ6G": {
       "type": "custom-liquid",
       "custom_css": [],
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -145,7 +133,6 @@
     },
     "custom_liquid_ANrh9d": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
@@ -158,7 +145,6 @@
     },
     "custom_liquid_yaYm9U": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -171,7 +157,6 @@
     },
     "custom_liquid_kGeeAa": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -184,7 +169,6 @@
     },
     "custom_liquid_CGAKqe": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -197,7 +181,6 @@
     },
     "custom_liquid_tK69K4": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -210,7 +193,6 @@
     },
     "custom_liquid_RKXamr": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
@@ -224,7 +206,6 @@
     "custom_liquid_fwGqqh": {
       "type": "custom-liquid",
       "disabled": true,
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
@@ -262,7 +243,6 @@
     },
     "custom_liquid_MJd4UW": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
@@ -275,7 +255,6 @@
     },
     "custom_liquid_CNjtfh": {
       "type": "custom-liquid",
-      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
