@@ -9920,4 +9920,8 @@ cart-notification-drawer a[href="/checkout"] {
   color: #000;
 }
 
+  form[action="/cart"] a[href="/cart"].button--secondary {
+  display: none !important;
+}
+
 
