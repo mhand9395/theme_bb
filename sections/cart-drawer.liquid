@@ -155,17 +155,7 @@
         {%- endif -%}
 
         {%- if section.settings.show_checkout_button -%}
-          {%- render 'button',
-  type: 'submit',
-  content: checkout_label,
-  icon: 'picto-lock',
-  name: 'checkout',
-  size: 'xl',
-  background: '#fdd835',
-  text_color: '#000000',
-  stretch: true
--%}
-
+          {%- render 'button', type: 'submit', content: checkout_label, icon: 'picto-lock', name: 'checkout', size: 'xl' -%}
         {%- endif -%}
       </form>
     </div>
