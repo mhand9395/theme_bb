@@ -9878,3 +9878,15 @@ split-lines {
   display: -webkit-box;
   overflow: hidden;
 }
+
+.shopify-payment-button {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 1rem;
+}
+
+.product-form__buttons {
+  flex-direction: column !important;
+  gap: 1rem;
+}
+
