@@ -9905,8 +9905,19 @@ split-lines {
   border-radius: 9999px !important; /* même arrondi que bouton panier */
   text-align: center !important;
 
-  cart-notification-drawer form[action="/cart"] {
+cart-notification-drawer form[action="/cart"] {
   display: none !important;
+}
+
+cart-notification-drawer a[href="/checkout"] {
+  width: 100% !important;
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+  background: #fcd34d;
+  color: #000;
 }
 
 
