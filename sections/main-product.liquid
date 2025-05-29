@@ -129,6 +129,7 @@ quick buy information in a template, that will be extracted in JS, but ensure it
     {%- endfor -%}
   </div>
 </template>
+{%- comment -%}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form[action="/cart/add"]');
@@ -139,6 +140,7 @@ quick buy information in a template, that will be extracted in JS, but ensure it
     }
   });
 </script>
+{%- endcomment -%}
 {% schema %}
 {
   "name": "Product page",
