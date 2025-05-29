@@ -74,16 +74,11 @@ document.addEventListener('DOMContentLoaded',()=>{let s=document.createElement('
 </script>
 
 <script>
-  document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-  });
-
-  document.addEventListener("keydown", function(e) {
-    if (
-      e.key === "F12"  // DevTools
-      (e.ctrlKey && e.shiftKey && (e.key === "I"  e.key === "J"  e.key === "C"))  // DevTools
-      (e.ctrlKey && e.key === "U") // View source
-    ) {
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+        (e.ctrlKey && e.key === 'U')) {
       e.preventDefault();
     }
   });
