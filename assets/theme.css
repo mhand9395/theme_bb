@@ -9924,4 +9924,7 @@ cart-notification-drawer a[href="/checkout"] {
   display: none !important;
 }
 
+  .product-quick-add__variant .price-list {
+  color: #3b82f6 !important; /* bleu clair (ex : Tailwind blue-500) */
+}
 
