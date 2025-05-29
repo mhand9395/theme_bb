@@ -130,6 +130,12 @@ quick buy information in a template, that will be extracted in JS, but ensure it
   </div>
 </template>
 
+<style>
+  .product-quick-add__variant .price-list {
+    color: #3b82f6 !important;
+  }
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form[action="/cart/add"]');
