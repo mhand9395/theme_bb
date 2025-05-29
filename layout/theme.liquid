@@ -53,7 +53,25 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const style = document.createElement('style');
+    style.textContent = `
+      .product-quick-add .sale-price.text-on-sale {
+        color: #00aaff !important;
+      }
+    `;
+    document.head.appendChild(style);
 
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll('.product-quick-add .sale-price.text-on-sale').forEach(el => {
+        el.style.color = '#00aaff';
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
   </head>
 
 <script>
