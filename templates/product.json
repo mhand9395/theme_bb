@@ -143,6 +143,19 @@
         "input_text_color": ""
       }
     },
+    "custom_liquid_Dw6eLe": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .difference-section {\n    max-width: 1200px;\n    margin: 60px auto;\n    padding: 20px;\n    text-align: center;\n  }\n\n  .before-after-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 30px;\n    margin-bottom: 40px;\n    flex-wrap: wrap;\n  }\n\n  .before-after-box {\n    position: relative;\n    max-width: 250px;\n    overflow: hidden;\n    border-radius: 16px;\n    transition: transform 0.3s ease;\n  }\n\n  .before-after-box img {\n    width: 100%;\n    border-radius: 16px;\n    box-shadow: 0 8px 20px rgba(0,0,0,0.1);\n    transition: transform 0.4s ease;\n  }\n\n  .before-after-box:hover img {\n    transform: scale(1.05);\n  }\n\n  .before-after-label {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    background: #4da5ff;\n    color: white;\n    font-size: 12px;\n    font-weight: 700;\n    padding: 4px 10px;\n    border-radius: 4px;\n    text-transform: uppercase;\n    z-index: 2;\n  }\n\n  .after-label {\n    left: auto;\n    right: 10px;\n  }\n\n  .center-divider {\n    background: #e5f2fc;\n    border-radius: 50%;\n    width: 40px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: transform 0.3s ease;\n  }\n\n  .center-divider svg {\n    width: 20px;\n    height: 20px;\n    fill: #4da5ff;\n    transition: transform 0.3s ease;\n  }\n\n  @media screen and (max-width: 768px) {\n    .before-after-wrapper {\n      flex-direction: column;\n    }\n\n    .center-divider svg {\n      transform: rotate(90deg);\n    }\n  }\n\n  .difference-text {\n    max-width: 700px;\n    margin: 0 auto 40px;\n  }\n\n  .difference-text h3 {\n    font-size: 26px;\n    color: #4da5ff;\n    font-weight: 800;\n    margin-bottom: 10px;\n  }\n\n  .difference-text p {\n    color: #6b7280;\n    font-size: 16px;\n  }\n\n  .features-grid {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    gap: 20px;\n    margin-top: 30px;\n  }\n\n  .feature-item {\n    flex: 1 1 220px;\n    padding: 24px;\n    text-align: center;\n    background-color: #f1f8fe;\n    border-radius: 16px;\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.05);\n  }\n\n  .feature-item:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 12px 20px rgba(0,0,0,0.1);\n  }\n\n  .feature-emoji {\n    font-size: 32px;\n    margin-bottom: 12px;\n    display: block;\n  }\n\n  .feature-item h4 {\n    font-size: 18px;\n    font-weight: bold;\n    margin-bottom: 10px;\n    color: #0f1f35;\n  }\n\n  .feature-item p {\n    font-size: 14px;\n    color: #4b5563;\n  }\n\n  @media screen and (max-width: 768px) {\n    .features-grid {\n      flex-direction: column;\n      align-items: center;\n    }\n\n    .feature-item {\n      max-width: 100%;\n    }\n  }\n</style>\n\n<section class=\"difference-section\">\n  <!-- Avant / Après -->\n  <div class=\"before-after-wrapper\">\n    <div class=\"before-after-box\">\n      <span class=\"before-after-label\">AVANT</span>\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/Before_4eb032b2-064d-45c7-8d9b-c8506f45299b.jpg?v=1748600078\" alt=\"Avant PasDeLune®\">\n    </div>\n\n    <div class=\"center-divider\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M10 17l5-5-5-5v10z\"></path>\n      </svg>\n    </div>\n\n    <div class=\"before-after-box\">\n      <span class=\"before-after-label after-label\">APRÈS</span>\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/After_6702ffff-8d00-4121-87c5-7cbc5f468812.jpg?v=1748600077\" alt=\"Après PasDeLune®\">\n    </div>\n  </div>\n\n  <!-- Titre et texte -->\n  <div class=\"difference-text\">\n    <h3>La Différence PasDeLune®</h3>\n    <p>Faites l’expérience de la transformation : vos pas deviennent plus légers, votre posture s’aligne et vos douleurs disparaissent naturellement.</p>\n  </div>\n\n  <!-- 4 bénéfices -->\n  <div class=\"features-grid\">\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">🧍‍♂️</span>\n      <h4>Améliore la posture</h4>\n      <p>Un bon soutien de voûte plantaire aligne mieux la colonne vertébrale.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">⚡</span>\n      <h4>Boost vos pas</h4>\n      <p>Un effet ressort qui facilite la marche et la course.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">✂️</span>\n      <h4>Découpable</h4>\n      <p>Découpez selon votre taille avec une simple paire de ciseaux.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">🧼</span>\n      <h4>Lavable à la main</h4>\n      <p>Lavage rapide à l’eau tiède et au savon.</p>\n    </div>\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_HXtQ6G": {
       "type": "custom-liquid",
       "custom_css": [],
@@ -293,6 +306,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_Dw6eLe",
     "custom_liquid_HXtQ6G",
     "custom_liquid_ANrh9d",
     "custom_liquid_yaYm9U",
