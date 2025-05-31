@@ -143,6 +143,19 @@
         "input_text_color": ""
       }
     },
+    "custom_liquid_enWXjw": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .comfort-video-section {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    flex-wrap: wrap;\n    gap: 40px;\n    max-width: 1200px;\n    margin: 60px auto;\n    padding: 0 20px;\n  }\n\n  .comfort-text {\n    flex: 1 1 400px;\n    max-width: 500px;\n  }\n\n  .comfort-text h2 {\n    font-size: 24px;\n    font-weight: 800;\n    color: #0f1f35;\n    margin-bottom: 14px;\n  }\n\n  .comfort-text p {\n    font-size: 15px;\n    color: #4b5563;\n    line-height: 1.6;\n  }\n\n  .comfort-video {\n    flex: 1 1 400px;\n    max-width: 500px;\n    border-radius: 16px;\n    overflow: hidden;\n    box-shadow: 0 8px 20px rgba(0,0,0,0.08);\n  }\n\n  .comfort-video video {\n    width: 100%;\n    height: auto;\n    display: block;\n    border-radius: 16px;\n  }\n\n  @media screen and (max-width: 768px) {\n    .comfort-video-section {\n      flex-direction: column-reverse;\n      text-align: center;\n    }\n\n    .comfort-text h2 {\n      font-size: 20px;\n    }\n\n    .comfort-text p {\n      font-size: 14px;\n    }\n  }\n</style>\n\n<section class=\"comfort-video-section\">\n  <div class=\"comfort-text\">\n    <h2>Soulagez vos douleurs plantaires</h2>\n    <p>\n      Découvrez les semelles PasDeLune® – le confort ultime pour vos pieds.<br>\n      Redécouvrez la joie de marcher, vous tenir debout et vivre sans douleur.\n    </p>\n  </div>\n  <div class=\"comfort-video\">\n    <video autoplay muted playsinline loop>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/31e51bbbafaf4070bee27ae2411f37aa.mp4\" type=\"video/mp4\">\n      Votre navigateur ne supporte pas la lecture de vidéo.\n    </video>\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_nrLGNp": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -319,6 +332,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_enWXjw",
     "custom_liquid_nrLGNp",
     "custom_liquid_Dw6eLe",
     "custom_liquid_HXtQ6G",
