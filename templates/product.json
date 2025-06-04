@@ -107,6 +107,58 @@
         "input_text_color": ""
       }
     },
+    "custom_liquid_DBGwTM": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .review-section {\n    display: flex;\n    align-items: flex-start;\n    justify-content: center;\n    max-width: 1200px;\n    margin: 80px auto 40px;\n    gap: 40px;\n    font-family: 'Helvetica Neue', sans-serif;\n  }\n\n  .review-title-block {\n    flex: 0 0 220px;\n    text-align: center;\n  }\n\n  .review-title-block h2 {\n    font-size: 26px;\n    font-weight: 800;\n    line-height: 1.3;\n    margin-bottom: 12px;\n    color: #111827;\n  }\n\n  .review-title-block .stars {\n    color: #009DE0;\n    font-size: 20px;\n    margin-bottom: 5px;\n  }\n\n  .review-title-block .subtitle {\n    font-size: 14px;\n    color: #6b7280;\n  }\n\n  .review-carousel {\n    overflow: hidden;\n    flex: 1;\n    position: relative;\n    max-width: 900px;\n    border-radius: 12px;\n  }\n\n  .review-slider {\n    display: flex;\n    transition: transform 0.6s ease-in-out;\n  }\n\n  .review-card {\n    flex: 0 0 300px;\n    padding: 0 15px;\n    box-sizing: border-box;\n    display: flex;\n    align-items: stretch;\n  }\n\n  .review-box {\n    background: #f9fafb;\n    padding: 20px;\n    border-radius: 12px;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n  }\n\n  .review-box .stars {\n    color: #009DE0;\n    font-size: 18px;\n    margin-bottom: 10px;\n  }\n\n  .review-box p {\n    font-size: 15px;\n    color: #374151;\n    line-height: 1.6;\n    margin-bottom: 12px;\n    flex-grow: 1;\n  }\n\n  .review-box .author {\n    font-weight: 600;\n    font-size: 14px;\n    color: #111827;\n  }\n\n  .carousel-nav {\n    display: flex;\n    justify-content: center;\n    margin-top: 24px;\n    gap: 16px;\n  }\n\n  .carousel-nav button {\n    background: #ffffff;\n    border: 1px solid #cbd5e1;\n    border-radius: 50%;\n    padding: 8px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    width: 32px;\n    height: 32px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .carousel-nav button:hover {\n    background: #f1f5f9;\n    border-color: #94a3b8;\n  }\n\n  .carousel-nav svg {\n    width: 14px;\n    height: 14px;\n    fill: #64748b;\n  }\n\n  @media (max-width: 768px) {\n    .review-section {\n      flex-direction: column;\n      align-items: center;\n      gap: 16px;\n      margin-top: 40px;\n    }\n    .review-title-block {\n      margin-bottom: -12px;\n    }\n    .review-carousel {\n      max-width: 100%;\n    }\n    .review-card {\n      flex: 0 0 100%;\n    }\n  }\n</style>\n\n<div class=\"review-section\">\n  <div class=\"review-title-block\">\n    <h2>Plus de 1000 clients<br> satisfaits</h2>\n    <div class=\"stars\">★★★★★</div>\n    <div class=\"subtitle\">basé sur 773 avis</div>\n  </div>\n\n  <div class=\"review-carousel\">\n    <div class=\"review-slider\" id=\"slider\">\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Confort exceptionnel. Je les porte toute la journée sans aucune douleur.</p><div class=\"author\">Camille R.</div></div></div>\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Idéal pour la marche. J'ai senti une vraie différence dès les premiers jours.</p><div class=\"author\">Julien M.</div></div></div>\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Super confortables et bien adaptées à mes chaussures de ville.</p><div class=\"author\">Emma V.</div></div></div>\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Excellent produit. Je les ai mises dans mes bottes et elles ont tout changé.</p><div class=\"author\">Kevin</div></div></div>\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Simple et efficace. Super confort et bon soutien.</p><div class=\"author\">Gerrick</div></div></div>\n      <div class=\"review-card\"><div class=\"review-box\"><div class=\"stars\">★★★★★</div><p>Je suis debout toute la journée pour mon travail et ces semelles ont changé ma vie.</p><div class=\"author\">Laura T.</div></div></div>\n    </div>\n  </div>\n</div>\n<div class=\"carousel-nav\">\n  <button onclick=\"manualSlide(-1)\">\n    <svg viewBox=\"0 0 24 24\"><path d=\"M15 6l-6 6 6 6\"/></svg>\n  </button>\n  <button onclick=\"manualSlide(1)\">\n    <svg viewBox=\"0 0 24 24\"><path d=\"M9 6l6 6-6 6\"/></svg>\n  </button>\n</div>\n\n<script>\n  const slider = document.getElementById('slider');\n  const slideWidth = 300;\n  let isAnimating = false;\n\n  function moveToNext() {\n    if (isAnimating) return;\n    isAnimating = true;\n    slider.style.transition = 'transform 0.6s ease-in-out';\n    slider.style.transform = `translateX(-${slideWidth}px)`;\n\n    setTimeout(() => {\n      slider.appendChild(slider.children[0]);\n      slider.style.transition = 'none';\n      slider.style.transform = 'translateX(0)';\n      isAnimating = false;\n    }, 600);\n  }\n\n  function moveToPrev() {\n    if (isAnimating) return;\n    isAnimating = true;\n    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);\n    slider.style.transition = 'none';\n    slider.style.transform = `translateX(-${slideWidth}px)`;\n\n    requestAnimationFrame(() => {\n      slider.style.transition = 'transform 0.6s ease-in-out';\n      slider.style.transform = 'translateX(0)';\n    });\n\n    setTimeout(() => {\n      isAnimating = false;\n    }, 600);\n  }\n\n  function manualSlide(dir) {\n    if (dir === 1) moveToNext();\n    else moveToPrev();\n  }\n\n  setInterval(() => moveToNext(), 3000);\n</script>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_E6Y6JK": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .comfort-responsive {\n    margin: 0;\n    padding: 0;\n  }\n\n  .comfort-video {\n    padding: 0 16px; /* ✅ Marge horizontale mobile */\n  }\n\n  .comfort-video video {\n    display: block;\n    width: 100%;\n    height: auto;\n    margin: 0 auto;\n    padding: 0;\n    border: none;\n    border-radius: 16px;\n    max-width: 100%;\n  }\n\n  .comfort-text {\n    margin: 0;\n    padding: 10px 20px 16px;\n    text-align: center;\n  }\n\n  .comfort-text h2 {\n    font-size: 16px;\n    font-weight: 700;\n    color: #0f1f35;\n    margin: 0 0 6px 0;\n    line-height: 1.3;\n  }\n\n  .comfort-text p {\n    font-size: 13.5px;\n    color: #4b5563;\n    line-height: 1.5;\n    margin: 0;\n  }\n\n  /* -------- VERSION DESKTOP -------- */\n  @media screen and (min-width: 769px) {\n    .comfort-responsive {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      gap: 24px;\n      max-width: 1200px;\n      margin: 60px auto;\n      padding: 0 20px;\n    }\n\n    .comfort-video {\n      flex: 1;\n      max-width: 50%;\n      padding: 0;\n    }\n\n    .comfort-video video {\n      width: 100%;\n      border-radius: 20px;\n    }\n\n    .comfort-text {\n      flex: 1;\n      max-width: 50%;\n      text-align: left;\n      padding-left: 20px;\n    }\n\n    .comfort-text h2 {\n      font-size: 28px; /* ✅ Plus gros sur PC */\n      margin-bottom: 12px;\n    }\n\n    .comfort-text p {\n      font-size: 16px; /* ✅ Plus gros sur PC */\n      line-height: 1.6;\n    }\n  }\n</style>\n\n<section class=\"comfort-responsive\">\n  <div class=\"comfort-video\">\n    <video autoplay muted playsinline loop>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/31e51bbbafaf4070bee27ae2411f37aa.mp4\" type=\"video/mp4\">\n    </video>\n  </div>\n  <div class=\"comfort-text\">\n    <h2>Soulagez vos douleurs plantaires</h2>\n    <p>\n      Découvrez les semelles PasDeLune® – le confort ultime pour vos pieds.<br>\n      Redécouvrez la joie de marcher, vous tenir debout et vivre sans douleur.\n    </p>\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_aXDHHc": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n  .marquee-strip {\n    background-color: #e8f3fd;\n    width: 100vw;\n    padding: 6px 0;\n    overflow: hidden;\n    font-size: 13px;\n    font-weight: 600;\n    color: #0f1f35;\n    border-top: 1px solid #dbeafe;\n    border-bottom: 1px solid #dbeafe;\n    position: relative;\n    margin-left: calc(-50vw + 50%);\n  }\n\n  .marquee-inner {\n    display: flex;\n    width: fit-content;\n    animation: scroll-left 200s linear infinite;\n  }\n\n  .marquee-content {\n    display: flex;\n    gap: 50px;\n    white-space: nowrap;\n  }\n\n  .marquee-item {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n  }\n\n  @keyframes scroll-left {\n    0%   { transform: translateX(0); }\n    100% { transform: translateX(-100%); }\n  }\n\n  @media (max-width: 768px) {\n    .marquee-strip {\n      font-size: 12px;\n    }\n\n    .marquee-content {\n      gap: 30px;\n    }\n\n    .marquee-inner {\n      animation-duration: 250s;\n    }\n  }\n</style>\n\n<div class=\"marquee-strip\">\n  <div class=\"marquee-inner\">\n    <div class=\"marquee-content\">\n      {% assign content = \"🛡️ Garantie 90 jours,🌍 Livraison offerte dans le monde,🧡 10 000+ clients satisfaits\" | split: \",\" %}\n      {% for i in (1..10) %}\n        {% for item in content %}\n          <div class=\"marquee-item\">{{ item }}</div>\n        {% endfor %}\n      {% endfor %}\n    </div>\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_TFCrcA": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .difference-section {\n    max-width: 1200px;\n    margin: 60px auto;\n    padding: 20px;\n    text-align: center;\n  }\n\n  .before-after-wrapper {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 30px;\n    margin-bottom: 40px;\n    flex-wrap: wrap;\n  }\n\n  .before-after-box {\n    position: relative;\n    max-width: 250px;\n    overflow: hidden;\n    border-radius: 16px;\n    transition: transform 0.3s ease;\n  }\n\n  .before-after-box img {\n    width: 100%;\n    border-radius: 16px;\n    border: 2px solid #4da5ff; /* ✅ Contour bleu */\n    box-shadow: 0 8px 20px rgba(0,0,0,0.1);\n    transition: transform 0.4s ease;\n  }\n\n  .before-after-box:hover img {\n    transform: scale(1.05);\n  }\n\n  .before-after-label {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    background: #4da5ff;\n    color: white;\n    font-size: 12px;\n    font-weight: 700;\n    padding: 4px 10px;\n    border-radius: 4px;\n    text-transform: uppercase;\n    z-index: 2;\n  }\n\n  .after-label {\n    left: auto;\n    right: 10px;\n  }\n\n  .center-divider {\n    background: #e5f2fc;\n    border-radius: 50%;\n    width: 40px;\n    height: 40px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: transform 0.3s ease;\n  }\n\n  .center-divider svg {\n    width: 20px;\n    height: 20px;\n    fill: #4da5ff;\n    transition: transform 0.3s ease;\n  }\n\n  @media screen and (max-width: 768px) {\n    .before-after-wrapper {\n      flex-direction: column;\n    }\n\n    .center-divider svg {\n      transform: rotate(90deg);\n    }\n  }\n\n  .difference-text {\n    max-width: 700px;\n    margin: 0 auto 40px;\n  }\n\n  .difference-text h3 {\n    font-size: 26px;\n    color: #4da5ff;\n    font-weight: 800;\n    margin-bottom: 10px;\n  }\n\n  .difference-text p {\n    color: #6b7280;\n    font-size: 16px;\n  }\n\n  .features-grid {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    gap: 20px;\n    margin-top: 30px;\n  }\n\n  .feature-item {\n    flex: 1 1 220px;\n    padding: 24px;\n    text-align: center;\n    background-color: #f1f8fe;\n    border-radius: 16px;\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.05);\n  }\n\n  .feature-item:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 12px 20px rgba(0,0,0,0.1);\n  }\n\n  .feature-emoji {\n    font-size: 32px;\n    margin-bottom: 12px;\n    display: block;\n  }\n\n  .feature-item h4 {\n    font-size: 18px;\n    font-weight: bold;\n    margin-bottom: 10px;\n    color: #0f1f35;\n  }\n\n  .feature-item p {\n    font-size: 14px;\n    color: #4b5563;\n  }\n\n  @media screen and (max-width: 768px) {\n    .features-grid {\n      flex-direction: column;\n      align-items: center;\n    }\n\n    .feature-item {\n      max-width: 100%;\n    }\n  }\n</style>\n\n<section class=\"difference-section\">\n  <!-- Avant / Après -->\n  <div class=\"before-after-wrapper\">\n    <div class=\"before-after-box\">\n      <span class=\"before-after-label\">AVANT</span>\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/Before_4eb032b2-064d-45c7-8d9b-c8506f45299b.jpg?v=1748600078\" alt=\"Avant PasDeLune®\">\n    </div>\n\n    <div class=\"center-divider\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M10 17l5-5-5-5v10z\"></path>\n      </svg>\n    </div>\n\n    <div class=\"before-after-box\">\n      <span class=\"before-after-label after-label\">APRÈS</span>\n      <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/After_6702ffff-8d00-4121-87c5-7cbc5f468812.jpg?v=1748600077\" alt=\"Après PasDeLune®\">\n    </div>\n  </div>\n\n  <!-- Titre et texte -->\n  <div class=\"difference-text\">\n    <h3>La Différence PasDeLune®</h3>\n    <p>Faites l’expérience de la transformation : vos pas deviennent plus légers, votre posture s’aligne et vos douleurs disparaissent naturellement.</p>\n  </div>\n\n  <!-- 4 bénéfices -->\n  <div class=\"features-grid\">\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">🧍‍♂️</span>\n      <h4>Améliore la posture</h4>\n      <p>Un bon soutien de voûte plantaire aligne mieux la colonne vertébrale.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">⚡</span>\n      <h4>Boost vos pas</h4>\n      <p>Un effet ressort qui facilite la marche et la course.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">✂️</span>\n      <h4>Découpable</h4>\n      <p>Découpez selon votre taille avec une simple paire de ciseaux.</p>\n    </div>\n    <div class=\"feature-item\">\n      <span class=\"feature-emoji\">🧼</span>\n      <h4>Lavable à la main</h4>\n      <p>Lavage rapide à l’eau tiède et au savon.</p>\n    </div>\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_HXtQ6G": {
       "type": "custom-liquid",
       "custom_css": [],
@@ -117,6 +169,19 @@
         "remove_horizontal_spacing": true,
         "liquid": "<style>\n  .stats-wrapper {\n    margin: 0;\n    padding: 0;\n    background-color: #f9fafb;\n    width: 100%;\n  }\n\n  .stats-section {\n    max-width: 1200px;\n    margin: 0 auto;\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: center;\n    gap: 40px;\n    padding: 40px 20px;\n  }\n\n  .stats-media {\n    flex: 1;\n    min-width: 300px;\n    border-radius: 16px;\n    overflow: hidden;\n    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);\n  }\n\n  .stats-media video {\n    width: 100%;\n    height: auto;\n    display: block;\n    border-radius: 16px;\n  }\n\n  .stats-content {\n    flex: 1;\n    min-width: 300px;\n    max-width: 500px;\n  }\n\n  .stats-content h2 {\n    font-size: 26px;\n    font-weight: 800;\n    margin-bottom: 24px;\n    text-transform: uppercase;\n    color: #111827;\n    letter-spacing: 1px;\n  }\n\n  .stat-item {\n    display: flex;\n    align-items: center;\n    gap: 16px;\n    padding: 14px 0;\n    border-bottom: 1px solid #e5e7eb;\n  }\n\n  .progress-circle {\n    --size: 56px;\n    --inner: 40px;\n    width: var(--size);\n    height: var(--size);\n    border-radius: 50%;\n    background: conic-gradient(#3b82f6 var(--percent), #e5e7eb 0);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: relative;\n  }\n\n  .progress-circle::after {\n    content: '';\n    position: absolute;\n    width: var(--inner);\n    height: var(--inner);\n    border-radius: 50%;\n    background: #ffffff;\n    z-index: 1;\n    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);\n  }\n\n  .progress-circle span {\n    position: relative;\n    z-index: 2;\n    font-weight: bold;\n    font-size: 13px;\n    color: #1f2937;\n  }\n\n  .stat-text {\n    font-size: 15px;\n    color: #374151;\n    text-align: left;\n  }\n\n  .stat-footnote {\n    font-size: 12px;\n    color: #6b7280;\n    margin-top: 12px;\n  }\n\n  .stat-button {\n    display: inline-block;\n    margin-top: 24px;\n    padding: 12px 26px;\n    background-color: #3b82f6;\n    color: white;\n    text-decoration: none;\n    border-radius: 8px;\n    font-weight: 600;\n    transition: background-color 0.3s ease;\n    box-shadow: 0 3px 6px rgba(59, 130, 246, 0.3);\n  }\n\n  .stat-button:hover {\n    background-color: #2563eb;\n  }\n\n  @media screen and (max-width: 768px) {\n    .stats-section {\n      flex-direction: column;\n      padding: 30px 15px;\n    }\n\n    .stats-content {\n      max-width: 100%;\n    }\n\n    .stats-content h2 {\n      text-align: center;\n    }\n\n    .stat-item {\n      flex-direction: column;\n      align-items: center;\n      text-align: center;\n      gap: 10px;\n    }\n\n    .stat-text {\n      text-align: center;\n      font-size: 15px;\n    }\n\n    .stat-button {\n      display: block;\n      margin: 24px auto 0;\n    }\n  }\n</style>\n\n<div class=\"stats-wrapper\">\n  <div class=\"stats-section\">\n    <div class=\"stats-media\">\n      <video autoplay muted loop playsinline>\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/47da81e0b3224cc998444c634ea227a1.mp4\" type=\"video/mp4\">\n        Votre navigateur ne prend pas en charge la lecture vidéo.\n      </video>\n    </div>\n\n    <div class=\"stats-content\">\n      <h2>CONFORT. SOULAGEMENT. SATISFACTION.</h2>\n\n      <div class=\"stat-item\">\n        <div class=\"progress-circle\" style=\"--percent: 78%;\">\n          <span>78%</span>\n        </div>\n        <div class=\"stat-text\">ont déclaré que leur douleur au talon avait disparu.</div>\n      </div>\n\n      <div class=\"stat-item\">\n        <div class=\"progress-circle\" style=\"--percent: 89%;\">\n          <span>89%</span>\n        </div>\n        <div class=\"stat-text\">portent leurs chaussures de travail toute la journée sans gêne.</div>\n      </div>\n\n      <div class=\"stat-item\">\n        <div class=\"progress-circle\" style=\"--percent: 97%;\">\n          <span>97%</span>\n        </div>\n        <div class=\"stat-text\">ont trouvé leurs chaussures plus confortables que jamais.</div>\n      </div>\n\n      <p class=\"stat-footnote\">* Résultats basés sur des études cliniques et consommateurs.</p>\n      <a href=\"{{ routes.cart_url | default: '#' }}\" class=\"stat-button\">COMMANDER MAINTENANT</a>\n    </div>\n  </div>\n</div>",
         "background": "#f9fafb",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_kTxH48": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .endorsement-container {\n    text-align: center;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    padding: 40px 20px;\n    max-width: 700px;\n    margin: 0 auto;\n  }\n\n  .endorsement-title {\n    font-size: 32px;\n    font-weight: 800;\n    color: #333333;\n    margin-bottom: 30px;\n  }\n\n  .endorsement-figure {\n    position: relative;\n    width: 250px;\n    margin: 0 auto 20px;\n  }\n\n  .endorsement-figure img.bg-shape {\n    width: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1;\n  }\n\n  .endorsement-figure img.doctor {\n    position: relative;\n    width: 100%;\n    z-index: 2;\n  }\n\n  .endorsement-quote {\n    font-size: 14px;\n    color: #4b5563;\n    margin-top: 20px;\n    line-height: 1.6;\n  }\n\n  .endorsement-quote strong {\n    color: #111827;\n  }\n\n  .endorsement-subtitle {\n    font-weight: 700;\n    font-size: 16px;\n    margin-top: 20px;\n    color: #111827;\n  }\n.endorsement-link {\n  color: #38bdf8;\n  font-weight: 500;\n  text-decoration: none;\n}\n\n  .endorsement-cite {\n    font-style: italic;\n    font-size: 14px;\n    color: #374151;\n    margin-top: 20px;\n  }\n\n  .quote-icon {\nfont-family: Georgia, serif;\n    width: 36px;\n    height: 36px;\n    background-color: #38bdf8;\n    color: white;\n    border-radius: 50%;\n    display: center;\n    justify-content: center;\n    align-items: center;\n    font-size: 35px;\n    position: relative;\n    left: 150px;\n    top: -5px;\n  }\n</style>\n\n<div class=\"endorsement-container\">\n  <h2 class=\"endorsement-title\">Recommandations d'expert</h2>\n\n  <div class=\"endorsement-figure\">\n    <!-- Remplace les URLs des images par tes vrais liens Shopify ou hébergés -->\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/forme_abstraite.png?v=1748357262\" alt=\"Background Shape\" class=\"bg-shape\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0904/6225/7494/files/your-doctor-photo.png?v=1748356888\" alt=\"Doctor\" class=\"doctor\">\n  </div>\n\n  <div class=\"quote-icon\">“</div>\n\n  <div class=\"endorsement-subtitle\">Aide ciblée</div>\n\n  <p class=\"endorsement-quote\">\n    <strong>En tant que kinésithérapeute, je recommande Pas de Lune</strong> à toute personne souffrant de douleurs aux pieds, de fasciite plantaire ou de pieds fatigués et douloureux. Ces semelles offrent un soutien ciblé de la voûte plantaire, un amortissement supérieur et une absorption des chocs pour réduire les tensions et assurer le confort des pieds tout au long de la journée. Mes patients ressentent systématiquement un soulagement notable, ce qui fait de Pas de Lune un choix intelligent et efficace pour une santé durable des pieds.\n    <br><br>\n\n<a href=\"https://pasdelune.com/pages/a-propos\" class=\"endorsement-link\" target=\"_blank\">\n    Je vous invite à lire mon article sur ces douleurs. J'explique en particulier de quelle façon Pas de Lune les soulage.\n    <br><br>\n</a>\n  </p>\n\n  <div class=\"endorsement-cite\">Dr. Thomas Schneider</div>\n</div>",
+        "background": "",
         "background_gradient": "",
         "text_color": ""
       }
@@ -173,6 +238,31 @@
         "text_color": ""
       }
     },
+    "17490690803882c858": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_frUNEg": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_frUNEg"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    },
     "custom_liquid_RKXamr": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -182,19 +272,6 @@
         "remove_horizontal_spacing": true,
         "liquid": "<style>\n.faq-section {\n  font-family: 'Helvetica Neue', sans-serif;\n  background-color: #f9fafb;\n  padding: 20px 20px;\n  max-width: 720px; /* centrage plus serré */\n  margin: 0 auto;\n}\n\n.faq-section h2 {\n  text-align: center;\n  font-size: 24px;\n  font-weight: 700;\n  color: #111827;\n  margin: 0 0 24px;\n}\n\n.faq-item {\n  border-bottom: 1px solid #e5e7eb;\n  margin-bottom: 8px;\n}\n\n.faq-question {\n  background: none;\n  border: none;\n  font-size: 15px;\n  font-weight: 500;\n  color: #111827;\n  width: 100%;\n  text-align: left;\n  padding: 10px 16px;\n  cursor: pointer;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.faq-answer {\n  max-height: 0;\n  overflow: hidden;\n  transition: all 0.3s ease;\n  background-color: #ffffff;\n  padding: 0 16px;\n  font-size: 14px;\n  color: #374151;\n  font-weight: 400;\n}\n\n.faq-answer.open {\n  max-height: 500px;\n  padding: 12px 16px;\n}\n\n.faq-icon {\n  font-size: 18px;\n  transition: transform 0.3s ease;\n}\n\n.faq-icon.rotate {\n  transform: rotate(45deg);\n}\n</style>\n\n<div class=\"faq-section\">\n  <h2>Une question ?</h2>\n\n  <div class=\"faq-item\">\n    <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n      Qu’est-ce que la technologie 4-D CloudBounce™ ?\n      <span class=\"faq-icon\">+</span>\n    </button>\n    <div class=\"faq-answer\">\n      <p>La technologie 4-D CloudBounce™ est une innovation qui offre un amorti et un soutien supérieurs, garantissant une sensation douce et confortable à chaque pas.</p>\n    </div>\n  </div>\n\n  <div class=\"faq-item\">\n    <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n      Est-ce que CloudSole convient à tous les types de chaussures ?\n      <span class=\"faq-icon\">+</span>\n    </button>\n    <div class=\"faq-answer\">\n      <p>Oui, les semelles PasDeLune® sont conçues pour s’adapter facilement à une grande variété de chaussures, tout en améliorant leur confort et leur maintien.</p>\n    </div>\n  </div>\n\n  <div class=\"faq-item\">\n    <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n      Est-ce que CloudSole aide vraiment à soulager les pieds ?\n      <span class=\"faq-icon\">+</span>\n    </button>\n    <div class=\"faq-answer\">\n      <p>Absolument ! La semelle favorise la santé des pieds en offrant stabilité, soutien de la voûte plantaire et réduction de la fatigue. Idéal pour un confort durable au quotidien.</p>\n    </div>\n  </div>\n\n  <div class=\"faq-item\">\n    <button class=\"faq-question\" onclick=\"toggleFaq(this)\">\n      Puis-je utiliser CloudSole pour faire du sport ?\n      <span class=\"faq-icon\">+</span>\n    </button>\n    <div class=\"faq-answer\">\n      <p>Oui ! Sa technologie révolutionnaire améliore les performances globales de vos chaussures, et convient parfaitement pour le sport, la marche ou toute activité physique.</p>\n    </div>\n  </div>\n</div>\n\n<script>\nfunction toggleFaq(button) {\n  const answer = button.nextElementSibling;\n  const icon = button.querySelector('.faq-icon');\n  answer.classList.toggle('open');\n  icon.classList.toggle('rotate');\n}\n</script>",
         "background": "#f9fafb",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_fwGqqh": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>",
-        "background": "",
         "background_gradient": "",
         "text_color": ""
       }
@@ -228,13 +305,18 @@
   },
   "order": [
     "main",
+    "custom_liquid_DBGwTM",
+    "custom_liquid_E6Y6JK",
+    "custom_liquid_aXDHHc",
+    "custom_liquid_TFCrcA",
     "custom_liquid_HXtQ6G",
+    "custom_liquid_kTxH48",
     "custom_liquid_yaYm9U",
     "custom_liquid_kGeeAa",
     "custom_liquid_CGAKqe",
     "custom_liquid_tK69K4",
+    "17490690803882c858",
     "custom_liquid_RKXamr",
-    "custom_liquid_fwGqqh",
     "custom_liquid_MJd4UW",
     "custom_liquid_CNjtfh"
   ]
