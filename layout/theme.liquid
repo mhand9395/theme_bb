@@ -53,55 +53,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const style = document.createElement('style');
-    style.textContent = `
-      .product-quick-add .sale-price.text-on-sale {
-        color: #00aaff !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    const observer = new MutationObserver(() => {
-      document.querySelectorAll('.product-quick-add .sale-price.text-on-sale').forEach(el => {
-        el.style.color = '#00aaff';
-      });
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
   </head>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const observer = new MutationObserver(() => {
-      const btnPanier = document.querySelector('form[action="/cart"] a.button--secondary');
-      if (btnPanier) {
-        btnPanier.remove(); // Supprimer le bouton "Panier"
-        console.log('🟡 Bouton Panier supprimé');
-        observer.disconnect(); // Stopper après réussite
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{let s=document.createElement('style');s.innerHTML='button[name="checkout"]{width:100%;background:#fcd34d!important;color:#000!important;padding:1rem!important;text-align:center;font-weight:700;border-radius:9999px!important;font-size:16px;border:none;box-shadow:0 2px 4px rgba(0,0,0,0.1)}button[name="checkout"]:hover{background:#fbbf24!important}button[name="checkout"] div,.button__loader{color:#000!important}';document.head.appendChild(s);});
-</script>
-
-<script>
-  document.addEventListener('contextmenu', e => e.preventDefault());
-  document.addEventListener('keydown', e => {
-    if (e.key === 'F12' || 
-        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
-        (e.ctrlKey && e.key === 'U')) {
-      e.preventDefault();
-    }
-  });
-</script>
 
   <body class="{% if settings.show_page_transition %}page-transition{% endif %} {% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
     {%- render 'shadow-dom-templates' -%}

@@ -130,23 +130,6 @@ quick buy information in a template, that will be extracted in JS, but ensure it
   </div>
 </template>
 
-<style>
-  #shopify-section-template--{{ section.id }}__main .product-quick-add__variant .price-list {
-    color: #3b82f6 !important;
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form[action="/cart/add"]');
-    if (form) {
-      form.addEventListener('submit', function () {
-        setTimeout(() => window.location.href = '/checkout', 300);
-      });
-    }
-  });
-</script>
-
 {% schema %}
 {
   "name": "Product page",
