@@ -12,29 +12,11 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-        "content_width": "80ch"
-      }
+      "settings": {}
     },
     "contact": {
       "type": "contact",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "Avez-vous une question ?",
-        "content": "<p>Des questions ? ☁️🌙</p><p> Nous sommes toujours ravis de vous aider !</p><p>Mail : contact@pasdelune.com</p>",
-        "text_position": "center",
-        "contact_form_size": "large",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "contact_background": "#ffffff",
-        "contact_text_color": "",
-        "button_background": "#00a2ff",
-        "button_text_color": "#ffffff"
-      }
+      "settings": {}
     }
   },
   "order": [
